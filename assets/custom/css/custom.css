@@ -1,0 +1,27 @@
+.jsr-btn-add{
+	border-radius: 40px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    margin-bottom: 10px !important;
+}
+
+.jsr-cmd-btn{
+	margin: 4px !important;
+}
+
+.btn-modal-tab{
+	margin-top: 10px !important;
+}
+
+.table-responsive{
+    padding: 10px 0 10px 0 !important;
+}
+
+.custom-filter-wrapper{
+    background: #fff;
+    padding: 20px 0 0 40px;
+}
+
+.hidden-xs-down{
+    font-size: 12px;
+}
