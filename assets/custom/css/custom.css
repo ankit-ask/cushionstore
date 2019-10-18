@@ -28,6 +28,9 @@
 
 .tech-header{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .top-header{
@@ -39,6 +42,32 @@
 .top-header p{
     margin-bottom: 0;
 }
+.tech-header button{
+    color: #707070;
+    background: #E6E7E9;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tech-header input{
+    color: #707070;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px !important;
+}
+
+.tech-header button:hover, .tech-header button:active, .tech-header button:focus{
+    border: none;
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.top-header i{
+    padding-right: 10px;
+}
 
 .nav-link{
     font-weight: bold;
@@ -47,4 +76,214 @@
 
 .nav-item.active{
     border-bottom: solid 2px #707070;
+}
+
+.hero-section{
+    padding: 0;
+    background: url("https://public.abodeliving.com/wp-content/uploads/2019/06/28164600/BED-JEANS-331-GREY-CUSHION-01-12430-1920x1080.jpg") no-repeat fixed center;
+    width: 100vw;
+    height: 60vh;
+    text-align: center;
+}
+
+.hero-content{
+    padding-top: 22vh;
+}
+
+.hero-content p{
+        font-size: 3.5em;
+        font-weight: bolder;
+        color: #ffffff;
+}
+
+.tech-dark-btn{
+    /* background: #707070; */
+    background: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+.tech-dark-btn:hover, .tech-dark-btn:active, .tech-dark-btn:focus{
+    border: none;
+    background: #707070 !important;
+}
+
+.hero-content button{
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section-heading{
+    text-align: center;
+    margin-top: 3em;
+}
+
+.section-heading p{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: solid 3px #707070;
+    max-width: 300px;
+    margin: 0 calc(50% - 150px)
+}
+
+.section-sub-heading{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.section-sub-heading p{
+    font-size: 1.2em;
+    max-width: 340px;
+    margin: 0 calc(50% - 170px);
+    color: #707070;
+    font-style: italic;
+}
+
+.product-wrapper{
+    text-align: center;
+    float: left;
+    padding: 20px;
+}
+
+.product-inner{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.product-inner button{
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.banner-section{
+    margin-top: 50px;
+}
+
+.banner-img{
+    background: #707070;
+    height: 300px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 50px 0 0 50px;
+    padding: 20px;
+}
+
+.banner-cta{
+    float: left;
+    background: #E6E7E9;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 0 50px 50px 0;
+    padding: 20px;
+}
+
+.banner-cta p:first-child {
+    font-size: 2em;
+    color: #707070;
+}
+
+.banner-cta p:nth-child(2) {
+    font-size: 2em;
+    font-weight: bold;
+    color: #707070;
+}
+
+.banner-cta button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* Why Us Section Styles */
+
+.why-us-section{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.pill-outer-wrapper{
+    padding-top: 5em;
+}
+.why-us-pills-wrapper{
+    float: left;
+    text-align: center;
+}
+
+.why-us-pill{
+    width: 200px;
+    height: 200px;
+    background: #E6E7E9;
+    border-radius: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.why-us-pill p{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.5em;
+    top: 50px;
+    padding: 20px;
+}
+
+
+
+/* Photo Gallery Styles */
+.photo-gallery-section{
+    padding-bottom: 50px;
+}
+.photo-gallery-section .section-heading{
+    padding-bottom: 30px;
+}
+
+
+
+
+/* Footer Styles */
+footer{
+    background: #707070;
+    color: #ffffff;
+    padding: 40px;
+}
+
+.brand-tab, .resources, .ordering-info{
+    float: left;
+}
+
+.resources p, .ordering-info p{
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+
+.resources p:first-child, .ordering-info p:first-child{
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.brand-name{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: solid 3px #ffffff;
+    max-width: 190px;
+    letter-spacing: 9px;
+    margin-bottom: 20px;
+}
+
+footer .brand-tab span i{
+    padding: 10px;
+    background: #ffffff;
+    color: #707070;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+.copyright{
+    margin-top: 30px;
 }
