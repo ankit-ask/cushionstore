@@ -1,5 +1,3 @@
-
-
 <!-- All Jquery -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url(); ?>assets/libs/jquery/dist/jquery.min.js"></script>
@@ -14,6 +12,8 @@
 
 <script src="<?php echo base_url(); ?>assets/custom/js/global.js"></script>
 
+<script src="<?php echo base_url(); ?>assets/libs/fontawesome/css/all.min.js"></script>
+
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="<?php echo base_url(); ?>assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/extra-libs/sparkline/sparkline.js"></script>
@@ -24,6 +24,7 @@
 <!--Custom JavaScript -->
 <script src="<?php echo base_url(); ?>assets/dist/js/custom.min.js"></script>
 <!--This page JavaScript -->
+
 <!-- Charts js Files -->
 <script src="<?php echo base_url(); ?>assets/libs/flot/excanvas.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/flot/jquery.flot.js"></script>

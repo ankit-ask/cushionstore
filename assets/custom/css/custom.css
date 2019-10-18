@@ -1,4 +1,4 @@
-.jsr-btn-add{
+/* .jsr-btn-add{
 	border-radius: 40px !important;
     padding-left: 25px !important;
     padding-right: 25px !important;
@@ -24,4 +24,27 @@
 
 .hidden-xs-down{
     font-size: 12px;
+} */
+
+.tech-header{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.top-header{
+    background: #707070;
+    color: #ffffff;
+    padding: 0.25rem 5rem;
+}
+
+.top-header p{
+    margin-bottom: 0;
+}
+
+.nav-link{
+    font-weight: bold;
+    color: #707070;
+}
+
+.nav-item.active{
+    border-bottom: solid 2px #707070;
 }

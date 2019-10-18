@@ -1,10 +1,13 @@
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/images/favicon.png">
 
-<link href="<?php echo base_url(); ?>assets/dist/css/style.min.css" rel="stylesheet">
+<!-- <link href="<?php echo base_url(); ?>assets/dist/css/style.min.css" rel="stylesheet"> -->
+<link href="<?php echo base_url(); ?>assets/dist/css/style.css" rel="stylesheet">
 
 <link href="<?php echo base_url(); ?>assets/libs/flot/css/float-chart.css" rel="stylesheet">
 
 <link href="<?php echo base_url(); ?>assets/custom/css/custom.css" rel="stylesheet">
+
+<link href="<?php echo base_url(); ?>assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
 
 <link href="<?php echo base_url(); ?>assets/libs/toastr/build/toastr.min.css" rel="stylesheet">
 
