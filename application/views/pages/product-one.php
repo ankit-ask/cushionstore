@@ -46,16 +46,50 @@
         </ul>
     
         <div class="tab-content">
+            <!-- Step 1 -->
             <div id="shape" class="tab-pane fade in active show">
                 <div class="tab-pane-main">
                     <div class="col-lg-4 panel-details">
                         <p class="panel-details-heading">SELECT YOUR CUSHION SHAPE</p>
                         <p class="panel-details-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" checked value="1">Square Corners</label>
+                        </div>
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="2">Rounded Back Corners</label>
+                        </div>
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="3">All Corners Rounded</label>
+                        </div>
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="4">Rounded Back</label>
+                        </div>
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="5">Round</label>
+                        </div>
+                        <div class="col-md-4 shape-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="6">Trapezoid</label>
+                        </div>
                     </div>   
                     <div class="clearfix"></div>
 
@@ -70,29 +104,295 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Step 2 -->
             <div id="style" class="tab-pane fade show">
-                <h3>STYLE</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-4 panel-details">
+                        <p class="panel-details-heading">SELECT THE STYLE OF YOUR CUSHION</p>
+                        <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-8 panel-customization">
+                        <div class="col-md-6 style-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                            <br>
+                            <label><input type="radio" name="style_radio" checked value="1">Waterfall Edge</label>
+                        </div>
+                        <div class="col-md-6 style-radio-wrapper">
+                            <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                            <br>
+                            <label><input type="radio" name="style_radio" value="2">Boxed Edge</label>
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Step 3 -->
             <div id="dimensions" class="tab-pane fade show">
-                <h3>DIMENSIONS</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-4 panel-details">
+                        <p class="panel-details-heading">ADJUST YOUR CUSHION DIMENSIONS</p>
+                        <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-8 panel-customization">
+                        <div class="col-md-12 dimension-preview">
+                            <p>Dimensions Image Goes Here</p>
+                        </div>
+                        <div class="col-md-12 dimension-select-wrapper">
+                            <p>CUSTOMIZE AS PER YOUR REQUIREMENT</p>
+                            <select class="form-control" id="thickness">
+                                <option>1 INCH IN THICKNESS</option>
+                                <option>2 INCH IN THICKNESS</option>
+                                <option>3 INCH IN THICKNESS</option>
+                                <option>4 INCH IN THICKNESS</option>
+                            </select>
+
+                            <select class="form-control" id="depth">
+                                <option>1 INCH IN DEPTH</option>
+                                <option>2 INCH IN DEPTH</option>
+                                <option>3 INCH IN DEPTH</option>
+                                <option>4 INCH IN DEPTH</option>
+                            </select>
+
+                            <select class="form-control" id="width">
+                                <option>1 INCH IN WIDTH</option>
+                                <option>2 INCH IN WIDTH</option>
+                                <option>3 INCH IN WIDTH</option>
+                                <option>4 INCH IN WIDTH</option>
+                            </select>
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Step 4 -->
             <div id="cover" class="tab-pane fade show">
-                <h3>COVER</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-4 panel-details">
+                        <p class="panel-details-heading">CHOOSE FABRCIS FOR YOUR CUSHION</p>
+                        <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-8 panel-customization">
+                        <div class="col-md-12 dimension-preview">
+                            <div class="col-md-6 fabric-sample-img">
+                                <p>Fabric Details</p>
+                            </div>
+                            <div class="col-md-6 fabric-sample-img">
+                                <p>Trimming Details</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 dimension-select-wrapper">
+                            <select class="form-control" id="thickness">
+                                <option>WITH TRIMMING</option>
+                                <option>NO TRIMMING</option>
+                            </select>
+
+                            <button class="btn btn-success fabric-select-btn">
+                                <i class="fas fa-angle-right"></i> SELECT CUSHION FABRIC
+                            </button>
+
+                            <button class="btn btn-success fabric-select-btn">
+                                <i class="fas fa-angle-right"></i> SELECT TRIMMING
+                            </button>
+
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Step 5 -->
             <div id="fill" class="tab-pane fade show">
-                <h3>FILL</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-4 panel-details">
+                        <p class="panel-details-heading">CHOOSE FILLING MATERIAL</p>
+                        <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-8 panel-customization">
+                        <div class="col-md-4 fill-wrapper">
+                            <div>
+                                Fill Image
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                        </div>
+                        <div class="col-md-4 fill-wrapper">
+                            <div>
+                                Fill Image
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                        </div>
+                        <div class="col-md-4 fill-wrapper">
+                            <div>
+                                Fill Image
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Step 6 -->
             <div id="ties" class="tab-pane fade show">
-                <h3>TIES</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-4 panel-details">
+                        <p class="panel-details-heading">CHOOSE FASTNER TYPE</p>
+                        <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-8 panel-customization">
+                        <div class="col-md-3 ties-wrapper">
+                            <div>
+                                <p>Ties Image</p>
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                        </div>
+                        <div class="col-md-3 ties-wrapper">
+                            <div>
+                                <p>Ties Image</p>
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                        </div>
+                        <div class="col-md-3 ties-wrapper">
+                            <div>
+                                <p>Ties Image</p>
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                        </div>
+                        <div class="col-md-3 ties-wrapper">
+                            <div>
+                                <p>Ties Image</p>
+                            </div>
+                            <br>
+                            <label><input type="radio" name="shape_radio" value="3">Type 4</label>
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Step 7 -->
             <div id="confirm" class="tab-pane fade show">
-                <h3>CONFIRM</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="tab-pane-main">
+                    <div class="col-lg-6 panel-details">
+                        <p class="panel-details-heading">REVIEW AND ORDER</p>
+                        <!-- <p class="panel-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p> -->
+                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <button class="btn product-preview-btn">
+                            PRODUCT PREVIEW
+                        </button>
+                    </div>
+                    <div class="col-lg-6 panel-customization confirm-wrapper">
+                        <p><span>PRODUCT</span><span>Custom Seat Cushion</span></p>
+                        <p><span>SHAPE</span><span>Square Corners</span></p>
+                        <p><span>STYLE</span><span>Waterfall Edge</span></p>
+                        <p><span>DIMENSIONS</span><span>25W x 12L x 5T</span></p>
+                        <p><span>COVER FABRIC</span><span>Antique Beige 5422-0000</span></p>
+                        <p><span>TRIMMING FABRIC</span><span>Black 5408-0000</span></p>
+                        <p><span>FILL</span><span>Reticulated Dry-Fast Foam</span></p>
+                        <p><span>TIES</span><span>Yes</span></p>
+                    </div>   
+                    <div class="clearfix"></div>
+
+                    
+                </div>
+                <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button>
+                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

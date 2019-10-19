@@ -26,6 +26,10 @@
     font-size: 12px;
 } */
 
+
+.float-left{
+    float: left;
+}
 /* ==================================================================== */
 /* Header Styles Begin*/
 /* ==================================================================== */
@@ -463,10 +467,159 @@
     float: left;
 }
 
+.panel-details{
+    border-right: solid 2px #707070;
+    height: 100%;
+}
+
+.panel-details img{
+    margin: 0 calc(50% - 125px);
+}
+
+.product-preview-btn{
+    background: #DADCDF;
+    /* background: #000000; */
+    color: #707070;
+    border: solid 1px #707070;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 180px;
+    margin: 0 calc(50% - 100px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-preview-btn:hover, .product-preview-btn:active, .product-preview-btn:focus{
+    /* border: none; */
+    /* background: #707070 !important; */
+    background: #000000 !important;
+    color: #ffffff;
+}
+
 .panel-details-heading{
     font-size: 1.2em;
     color: #707070;
     font-weight: bold;
+}
+
+.panel-customization{
+    padding: 2em;
+}
+.shape-radio-wrapper{
+    float: left;
+    height: 200px;
+    text-align: center;
+}
+.shape-radio-wrapper label{
+    padding: 1em;
+}
+
+.shape-radio-wrapper label input{
+    margin-right: 0.25em;
+}
+
+.style-radio-wrapper{
+    float: left;
+    height: 300px;
+    text-align: center;
+}
+.style-radio-wrapper label{
+    padding: 1em;
+}
+
+.style-radio-wrapper label input{
+    margin-right: 0.25em;
+}
+
+.dimension-preview{
+    height: 200px;
+    background: #ffffff;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.dimension-select-wrapper{
+    text-align: center;
+}
+.dimension-select-wrapper select{
+    float: left;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-right: 3%;
+}
+
+.fabric-select-btn{
+    background: #ffffff;
+    /* background: #000000; */
+    color: #707070;
+    border: none;
+    width: 30%;
+    margin-right: 3%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fabric-select-btn:hover, .fabric-select-btn:active, .fabric-select-btn:focus{
+    border: none;
+    background: #ffffff !important;
+    color: #707070;
+}
+
+.fabric-sample-img{
+    float: left;
+    background: #707070;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 3em;
+    height: 140px;
+    width: 40%;
+    margin: 2em 5%;
+    color: #ffffff;
+}
+
+.fill-wrapper{
+    float: left;
+    text-align: center;
+}
+
+.fill-wrapper div{
+    background: #707070;
+    color: #ffffff;
+    height: 100px;
+    text-align: center;
+}
+
+.ties-wrapper{
+    float: left;
+    text-align: center;
+}
+
+.ties-wrapper div{
+    background: #707070;
+    color: #ffffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin-left: 50px;
+}
+
+.ties-wrapper p{
+    margin-top: 20px;
+    position: relative;
+    top: 40%;
+}
+
+.confirm-wrapper{
+    padding: 2em;
+}
+.confirm-wrapper p{
+    border-bottom: solid 1px #707070;
+}
+.confirm-wrapper p span:first-child{
+    font-weight: bold;
+}
+
+.confirm-wrapper p span:nth-child(2){
+    float: right;
 }
 /* ==================================================================== */
 /* Products - Stepper Styles End*/
