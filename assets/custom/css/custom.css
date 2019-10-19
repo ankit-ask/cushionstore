@@ -26,6 +26,21 @@
     font-size: 12px;
 } */
 
+/* ==================================================================== */
+/* Header Styles Begin*/
+/* ==================================================================== */
+.navbar-brand{
+    width: 40%;
+}
+
+.dropdown-menu{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.dropdown-item{
+    color: #707070;
+}
 .tech-header{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: sticky;
@@ -51,6 +66,9 @@
     border: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+.tech-header form{
+    margin-right: 30px;
+}
 
 .tech-header input{
     color: #707070;
@@ -69,6 +87,10 @@
     padding-right: 10px;
 }
 
+.nav-item{
+    padding: 0 20px;
+}
+
 .nav-link{
     font-weight: bold;
     color: #707070;
@@ -78,6 +100,14 @@
     border-bottom: solid 2px #707070;
 }
 
+/* ==================================================================== */
+/* Header Styles End*/
+/* ==================================================================== */
+
+
+/* ==================================================================== */
+/* Home Styles Begin*/
+/* ==================================================================== */
 .hero-section{
     padding: 0;
     background: url("https://public.abodeliving.com/wp-content/uploads/2019/06/28164600/BED-JEANS-331-GREY-CUSHION-01-12430-1920x1080.jpg") no-repeat fixed center;
@@ -117,6 +147,7 @@
 .section-heading{
     text-align: center;
     margin-top: 3em;
+    margin-bottom: 2em;
 }
 
 .section-heading p{
@@ -160,6 +191,10 @@
 
 .banner-section{
     margin-top: 50px;
+}
+
+.banner-wrapper{
+    padding: 0 30px;
 }
 
 .banner-img{
@@ -242,10 +277,27 @@
     padding-bottom: 30px;
 }
 
+/* ==================================================================== */
+/* Home Styles End*/
+/* ==================================================================== */
+
+
+/* ==================================================================== */
+/* Products - Stepper Styles Begin*/
+/* ==================================================================== */
 
 
 
-/* Footer Styles */
+
+
+/* ==================================================================== */
+/* Products - Stepper Styles End*/
+/* ==================================================================== */
+
+
+/* ==================================================================== */
+/* Footer Styles Begin*/
+/* ==================================================================== */
 footer{
     background: #707070;
     color: #ffffff;
@@ -287,3 +339,8 @@ footer .brand-tab span i{
 .copyright{
     margin-top: 30px;
 }
+
+/* ==================================================================== */
+/* Footer Styles End*/
+/* ==================================================================== */
+

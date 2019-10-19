@@ -125,7 +125,7 @@
 <!-- Banner Section Begins -->
 <section class="banner-section">
 
-        <div class="col-lg-12">
+        <div class="col-lg-12 banner-wrapper">
 
             <div class="col-lg-8 banner-img" style="color: #fff; text-align: center">
                 <h1>Banner Goes Here</h1>

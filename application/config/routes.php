@@ -56,6 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 /*Api Routes */
 $route['home'] = 'home';
+$route['Pages/Product_One_Controller'] = 'product-one';
+
 //TODO
-//--Fix Breadcrumps
-//--Lead Management
