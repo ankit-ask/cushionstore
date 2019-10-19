@@ -286,10 +286,188 @@
 /* Products - Stepper Styles Begin*/
 /* ==================================================================== */
 
+.tech-container{
+    margin: 3em;
+}
+
+.about-product-us-section{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.about-product-section-heading p{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: solid 3px #707070;
+    max-width: 320px;
+    margin: 0 calc(50% - 160px);
+}
+
+.cta-section{
+    text-align: center;
+    padding: 15px;
+    background: #E6E7E9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
+}
+.cta-section .tech-dark-btn{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.cta-section-heading p{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: solid 3px #707070;
+    max-width: 220px;
+    margin: 0 calc(50% - 110px);
+}
+
+/* Product Stepper */
+.product-name, .product-price, .product-qty-wrapper, .product-add-to-cart{
+    float: left;
+}
+
+.product-name, .product-price{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.product-price{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.product-qty-wrapper{
+    background: #E6E7E9;
+    border-radius: 20px;
+    text-align: center;
+    width: 165px;
+}
+.product-qty-wrapper p{
+    margin-bottom: 0;
+    padding: 5px;
+}
+.product-qty-wrapper button{
+    background: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bolde;;
+}
+.product-qty-wrapper input{
+    width: 50px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+.add-to-cart-btn{
+    background: #707070;
+    /* background: #000000; */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.add-to-cart-btn:hover, .add-to-cart-btn:active, .add-to-cart-btn:focus{
+    border: none;
+    /* background: #707070 !important; */
+    background: #000000 !important;
+}
+
+.add-to-cart-btn i{
+    padding-right: 5px;
+}
 
 
+.stepper-wrapper{
+    margin-top: 2em;
+}
+
+.stepper-nav{
+    background: #E6E7E9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.stepper-nav li{
+    width: calc(100%/7);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #707070;
+}
+
+.stepper-nav li{
+    background: #E6E7E9;
+}
+
+.stepper-nav li.active{
+    background: #707070;
+}
+
+.stepper-nav li a{
+    color: #707070;
+    font-weight: bold;
+}
+
+.stepper-nav li.active a{
+    color: #ffffff;
+}
+
+.tab-pane{
+    height: 600px;
+    /* background: #E6E7E9;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1em; */
+}
+.tab-pane-main{
+    height: 500px;
+    background: #E6E7E9;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 2em;
+}
+
+.stepper-tab-btn-wrapper{
+    margin-top: 2em;
+}
+.stepper-previous-btn{
+    float: left;
+}
+.stepper-next-btn{
+    float: right;
+}
+
+.stepper-tab-dir-btn{
+    background: #707070;
+    /* background: #000000; */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 170px;
+}
+
+.stepper-tab-dir-btn:hover, .stepper-tab-dir-btn:active, .stepper-tab-dir-btn:focus{
+    border: none;
+    /* background: #707070 !important; */
+    background: #000000 !important;
+}
 
 
+.panel-customization, .panel-details{
+    float: left;
+}
+
+.panel-details-heading{
+    font-size: 1.2em;
+    color: #707070;
+    font-weight: bold;
+}
 /* ==================================================================== */
 /* Products - Stepper Styles End*/
 /* ==================================================================== */

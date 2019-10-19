@@ -54,8 +54,8 @@ $route['translate_uri_dashes'] = FALSE;
 // /*AJAX*/
 // $route['ajax/insert_enq']='Ajax_Controller/insert_enquiry';
 
-/*Api Routes */
+
 $route['home'] = 'home';
-$route['Pages/Product_One_Controller'] = 'product-one';
+$route['product-one'] = 'Pages/Product_One_Controller';
 
 //TODO

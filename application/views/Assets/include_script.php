@@ -1,10 +1,12 @@
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="<?php echo base_url(); ?>assets/libs/jquery/dist/jquery.min.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/libs/jquery/dist/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url(); ?>assets/libs/popper.js/dist/umd/popper.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
 <script src="<?php echo base_url(); ?>assets/custom/js/config.js"></script>
 <script src="<?php echo base_url(); ?>assets/custom/js/customForm.js"></script>
@@ -26,7 +28,7 @@
 <!--This page JavaScript -->
 
 <!-- Charts js Files -->
-<script src="<?php echo base_url(); ?>assets/libs/flot/excanvas.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/libs/flot/excanvas.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/flot/jquery.flot.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/flot/jquery.flot.pie.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/flot/jquery.flot.time.js"></script>
@@ -34,18 +36,18 @@
 <script src="<?php echo base_url(); ?>assets/libs/flot/jquery.flot.crosshair.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/chart/chart-page-init.js"></script>
-<script src="<?php echo base_url(); ?>assets/libs/toastr/build/toastr.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/libs/toastr/build/toastr.min.js"></script> -->
 
 <!-- <script src="https://cdn.datatables.net/fixedcolumns/3.2.6/js/dataTables.fixedColumns.min.js"></script> -->
 
-<script src="<?php echo base_url(); ?>assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
 <script src="<?php echo base_url(); ?>assets/extra-libs/multicheck/jquery.multicheck.js"></script>
 <script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/extra-libs/DataTables/js/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('assets/extra-libs/DataTables/js/dataTables.bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url(); ?>assets/extra-libs/DataTables/datatables.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/libs/toastr/build/toastr.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script> -->
 <!-- <script src="<?php echo base_url(); ?>assets/dist/js/bootgrid/jquery.bootgrid.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/bootgrid/jquery.bootgrid.fa.js"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/bootgrid/jquery.bootgrid.fa.min.js"></script> -->

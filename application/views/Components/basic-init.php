@@ -14,8 +14,4 @@
     }
   </script> -->
     <?php $this->view('Assets/include_css.php') ?>
-
-    <!-- <style>
-        .hero-section { background-image: url(<?php echo base_url('assets/images/background/cushion-hero.jpg')?>); }
-    </style> -->
 </head>
