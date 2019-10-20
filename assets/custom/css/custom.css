@@ -103,9 +103,17 @@
 .nav-item.active{
     border-bottom: solid 2px #707070;
 }
+
+/* @media (min-width: 979px) {
+    .dropdown:hover > .dropdown-menu{
+        display: block;    
+    }
+} */
+
 .dropdown:hover > .dropdown-menu{
     display: block;    
 }
+
 /* ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;    
 } */
@@ -364,7 +372,7 @@
     background: #ffffff;
     border-radius: 50px;
     text-align: center;
-    font-weight: bolde;;
+    font-weight: bold;
 }
 .product-qty-wrapper input{
     width: 50px;
@@ -629,6 +637,162 @@
 }
 /* ==================================================================== */
 /* Products - Stepper Styles End*/
+/* ==================================================================== */
+
+
+/* ==================================================================== */
+/* Cart Styles Begin*/
+/* ==================================================================== */
+
+/* .cart-section-heading{
+    
+}
+
+.cta-section{
+    text-align: center;
+    padding: 15px;
+    background: #E6E7E9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
+}
+.cta-section .tech-dark-btn{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 10px 30px;
+    border-radius: 20px;
+} */
+
+.cart-section{
+    margin: 3em;
+}
+
+.cart-item-wrapper{
+    background: #E6E7E9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.cart-section-heading p{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: solid 3px #707070;
+    max-width: 300px;
+    margin: 0 calc(50% - 150px);
+}
+
+.remove-item-btn{
+    background: #ffffff;
+    font-size: 0.8em;
+    color: #707070;
+    border: none;
+    margin-right: 3%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    float: right;
+}
+
+.remove-item-btn:hover, .remove-item-btn:active, .remove-item-btn:focus{
+    border: none;
+    background: #707070 !important;
+    color: #ffffff;
+}
+
+.item-details .item-heading{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.item-details-inner{
+    margin-top: 4em;
+}
+
+.item-details-inner p span:first-child{
+    font-weight: bold;
+}
+
+.item-details-inner p span:nth-child(2){
+    float: right;
+    /* padding-left: 2em; */
+}
+
+.item-extra-details-inner{
+    margin-top: 4em;
+}
+
+.item-extra-details-inner p{
+    border-bottom: solid 1px #707070;
+}
+.item-extra-details-inner p span:first-child{
+    font-weight: bold;
+}
+
+.item-extra-details-inner p span:nth-child(2){
+    float: right;
+}
+
+.cart-qty-label{
+    font-weight: bold;
+}
+.cart-qty-wrapper-inner{
+    float: right;
+}
+.cart-qty-wrapper-inner span button{
+    background: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cart-qty-wrapper-inner span input{
+    width: 50px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.item-details-img{
+    text-align: center;
+}
+.item-details-img img{
+    width: 200px;
+    padding-top: 2em;
+}
+
+
+.cart-total-etails{
+    width: 300px;
+    margin: 4em calc(50% - 150px);
+}
+
+.cart-total-etails p{
+    /* border-bottom: solid 1px #707070; */
+}
+.cart-total-etails p span:first-child{
+    font-weight: bold;
+    float: left;
+}
+
+.cart-total-etails p span:nth-child(2){
+    float: right;
+}
+
+
+.cart-bottom{
+    text-align: center;
+}
+
+.cart-bottom button{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+
+/* ==================================================================== */
+/* Cart Styles End*/
 /* ==================================================================== */
 
 
