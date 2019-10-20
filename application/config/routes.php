@@ -58,4 +58,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home';
 $route['product-one'] = 'Pages/Product_One_Controller';
 
+$route['cart'] = 'Pages/Cart_Controller';
+
 //TODO
