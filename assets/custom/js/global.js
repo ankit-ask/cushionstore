@@ -16,9 +16,9 @@ $(document).ready(function(){
 		showLock();
 	}
 
-	$(function() {
-		$('#toggle-one').bootstrapToggle();
-	  })
+	// $(function() {
+	// 	$('#toggle-one').bootstrapToggle();
+	//   })
 
 });
 
