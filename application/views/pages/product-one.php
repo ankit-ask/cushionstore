@@ -96,10 +96,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <!-- <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
-                    </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    </button> -->
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -135,10 +135,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -190,10 +190,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -242,10 +242,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -292,10 +292,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -349,10 +349,10 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
@@ -386,18 +386,16 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-previous-btn">
+                    <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
-                    <button class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
-                        NEXT STEP <i class="fas fa-angle-right"></i>
+                    <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
+                        CONTINUE <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    
-
 </section>
 
 <!-- Product Info Section Begins -->

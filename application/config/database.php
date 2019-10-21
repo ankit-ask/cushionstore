@@ -74,6 +74,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+
+// For localhost
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -96,12 +98,13 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
+// For server
 // $db['default'] = array(
 // 	'dsn'	=> '',
 // 	'hostname' => 'localhost',
 // 	'username' => 'phpmyadmin',
 // 	'password' => 'Technomize@db',
-// 	'database' => 'jsr_db',
+// 	'database' => 'cushion_db',
 // 	'dbdriver' => 'mysqli',
 // 	'dbprefix' => '',
 // 	'pconnect' => FALSE,

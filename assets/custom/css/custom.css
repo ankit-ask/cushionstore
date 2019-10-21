@@ -103,9 +103,17 @@
 .nav-item.active{
     border-bottom: solid 2px #707070;
 }
+
+/* @media (min-width: 979px) {
+    .dropdown:hover > .dropdown-menu{
+        display: block;    
+    }
+} */
+
 .dropdown:hover > .dropdown-menu{
     display: block;    
 }
+
 /* ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;    
 } */

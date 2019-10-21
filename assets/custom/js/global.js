@@ -9,6 +9,17 @@ $('.dropdown-menu').on("click.bs.dropdown", function (e) {
 
 $(document).ready(function(){
 
+	// $('#lock_modal').modal('hide');
+
+	// alert(getFromStorage(LOCK_ENABLED));
+	if(getFromStorage(LOCK_ENABLED) == 1){
+		showLock();
+	}
+
+	// $(function() {
+	// 	$('#toggle-one').bootstrapToggle();
+	//   })
+
 });
 
 function doLogout() {
