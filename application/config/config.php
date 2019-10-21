@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:1234/cushionstore';
-// $config['base_url'] = 'http://jsr.technomize.com';
+// $config['base_url'] = 'http://localhost:1234/cushionstore';
+$config['base_url'] = 'http://cushionstore.technomize.com';
 
 // $config['api_url'] = 'http://jsr.technomize.com/api';
 

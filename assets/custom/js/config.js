@@ -1,7 +1,8 @@
-var BASE_URL = "http://jsr.technomize.com/api/";
-var DASHBOARD_URL = "http://jsr.technomize.com/dashboard";
+var BASE_URL = "http://cushionstore.technomize.com/api/";
+var DASHBOARD_URL = "http://cushionstore.technomize.com/admin/dashboard";
 
-var COMAPNY_NAME = "JSR Global Research";
+
+var COMAPNY_NAME = "Coushion Store";
 
 var LOGIN_API = "login";
 
