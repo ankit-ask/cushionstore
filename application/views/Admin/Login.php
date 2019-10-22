@@ -1,64 +1,90 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+<!--  -->
+<!-- Bootstrap Template By Technomize -->
 
-<?php $this->view('Components/basic-init.php') ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-    <div class="main-wrapper">
+<head>
 
-        <?php $this->view('Components/preloader.php') ?>
-        
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-            <div class="auth-box bg-dark border-top border-secondary">
-                <div id="loginform">
-                    <div class="text-center p-t-20 p-b-20">
-                        <!-- <span class="db"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="logo" /></span> -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Technomize Cushion Store - Login</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="<?php echo base_url(); ?>assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="<?php echo base_url(); ?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  </div>
+                  <form id ="login_form" class="user">
+                    <div class="form-group">
+                      <input type="text" id="userId" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="UserId">
                     </div>
-                    <br>
-                    <!-- Form -->
-                    <form id="login_form" class="form-horizontal m-t-20" id="loginform" action="index.html">
-                        <div class="row p-b-30">
-                            <div class="col-12">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
-                                    </div>
-                                    <input type="text" id="userId" class="form-control form-control-lg" placeholder="UserId" aria-label="userId" aria-describedby="basic-addon1" required="" name="username">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-lock"></i></span>
-                                    </div>
-                                    <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="" name="password">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row border-top border-secondary">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <div class="p-t-20">
-                                        <button id="login_submit" onclick="doLogin()" class="btn btn-success float-left" type="button">Login</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Just A Reminder!</label>
+                      </div>
+                    </div>
+                    <a href="#" id="login_submit" onclick="doLogin()"  class="btn btn-primary btn-user btn-block">
+                      Login
+                    </a>
+                    <hr>
+                    <a href="https://technomize.com" class="btn btn-google btn-user btn-block">
+                      <i class="fa fa-wrench fa-fw"></i> Contact Technomize
+                    </a>
+                  </form>
+                  <hr>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
+
+      </div>
+
     </div>
-    <!-- ============================================================== -->
-    <?php $this->view('Assets/include_script.php')?>
-	
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+	<script src="<?php echo base_url(); ?>assets/admin/vendor/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/admin/js/sb-admin-2.min.js"></script>	
+	<script src="<?php echo base_url(); ?>assets/custom/js/config.js"></script>
+	<script src="<?php echo base_url(); ?>assets/custom/js/customForm.js"></script>
+	<script src="<?php echo base_url(); ?>assets/custom/js/storage.js"></script>
+	<script src="<?php echo base_url(); ?>assets/custom/js/global.js"></script>
 	<script src="<?php echo base_url(); ?>assets/custom/js/login.js"></script>
 
-
 </body>
+
 </html>
