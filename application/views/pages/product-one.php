@@ -33,7 +33,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-
     <div class="stepper-wrapper">
         <ul class="nav nav-pills nav-justified stepper-nav">
             <li class="active"><a data-toggle="pill" href="#shape">SHAPE</a></li>
@@ -96,9 +95,6 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
-                    <!-- <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
-                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
-                    </button> -->
                     <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
@@ -390,7 +386,7 @@
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
                     <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
-                        CONTINUE <i class="fas fa-angle-right"></i>
+					<i class="fab fa-opencart"></i> ADD TO CART
                     </button>
                 </div>
             </div>

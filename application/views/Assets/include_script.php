@@ -21,7 +21,8 @@
 <script src="<?php echo base_url(); ?>assets/extra-libs/sparkline/sparkline.js"></script>
 <!--Wave Effects -->
 <script src="<?php echo base_url(); ?>assets/dist/js/waves.js"></script>
-<script src="<?php echo base_url(); ?>assets/dist/js/product-one.js"></script>
+<script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/dist/js/test.js"></script> -->
 <!--Menu sidebar -->
 <script src="<?php echo base_url(); ?>assets/dist/js/sidebarmenu.js"></script>
 <!--Custom JavaScript -->
@@ -67,6 +68,3 @@
     $('#zero_config').DataTable();
 </script>
 
-<script>
-
-</script>
