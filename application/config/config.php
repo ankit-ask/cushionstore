@@ -29,6 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // For localhost
 $config['base_url'] = 'http://localhost/cushionstore';
+// $config['base_url'] = 'http://localhost:1234/cushionstore';
 
 // For server
 // $config['base_url'] = 'http://cushionstore.technomize.com';
