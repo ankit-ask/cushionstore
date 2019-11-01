@@ -9,6 +9,6 @@
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="<?php echo base_url(); ?>assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/extra-libs/sparkline/sparkline.js"></script>
-<script src="<?php echo base_url(); ?>assets/dist/js/product-one.js"></script>
+<script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
 <!--Custom JavaScript -->
 <script src="<?php echo base_url(); ?>assets/dist/js/custom.min.js"></script>
