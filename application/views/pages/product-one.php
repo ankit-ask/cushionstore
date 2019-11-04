@@ -33,6 +33,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
+
     <div class="stepper-wrapper">
         <ul class="nav nav-pills nav-justified stepper-nav">
             <li class="active"><a data-toggle="pill" href="#shape">SHAPE</a></li>
@@ -53,39 +54,39 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img src="<?php echo base_url('assets/images/stepper/product-one/shapes/product-1-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/seat-selet-square.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" checked value="1">Square Corners</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/top-rounded-corners.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="2">Rounded Back Corners</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/all-rounded-corners.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="3">All Corners Rounded</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/rounded-back.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="4">Rounded Back</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/rounded.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="5">Round</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/seat-selet-square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/trapezoidal.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="6">Trapezoid</label>
                         </div>
@@ -95,6 +96,9 @@
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
+                    <!-- <button id="previousbtn" class="btn btn-success stepper-tab-dir-btn stepper-previous-btn previousbtn">
+                        <i class="fas fa-angle-left"></i> PREVIOUS STEP
+                    </button> -->
                     <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn nextbtn">
                         NEXT STEP <i class="fas fa-angle-right"></i>
                     </button>
@@ -116,18 +120,17 @@
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-6 style-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/waterfall-edge.png')?>">
                             <br>
                             <label><input type="radio" name="style_radio" checked value="1">Waterfall Edge</label>
                         </div>
                         <div class="col-md-6 style-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/boxed-edge.png')?>">
                             <br>
                             <label><input type="radio" name="style_radio" value="2">Boxed Edge</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
-
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
@@ -386,7 +389,7 @@
                         <i class="fas fa-angle-left"></i> PREVIOUS STEP
                     </button>
                     <button id="nextbtn" class="btn btn-success stepper-tab-dir-btn stepper-next-btn">
-					<i class="fab fa-opencart"></i> ADD TO CART
+                        CONTINUE <i class="fas fa-angle-right"></i>
                     </button>
                 </div>
             </div>
