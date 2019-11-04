@@ -120,12 +120,12 @@
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-6 style-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-one/waterfall-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/structure/waterfall-edge.png')?>">
                             <br>
                             <label><input type="radio" name="style_radio" checked value="1">Waterfall Edge</label>
                         </div>
                         <div class="col-md-6 style-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-one/boxed-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-one/structure/boxed-edge.png')?>">
                             <br>
                             <label><input type="radio" name="style_radio" value="2">Boxed Edge</label>
                         </div>
@@ -266,24 +266,24 @@
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 fill-wrapper">
                             <div>
-                                Fill Image
+                                <img src="<?php echo base_url('assets/images/stepper/fill/polyster-fiber.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                            <label><input type="radio" name="shape_radio" checked value="1">Polyster Fiber</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
-                                Fill Image
+                                <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                            <label><input type="radio" name="shape_radio" value="2">Polyurethane Foam</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
-                                Fill Image
+                                <img src="<?php echo base_url('assets/images/stepper/fill/reticulated-dry-fast-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                            <label><input type="radio" name="shape_radio" value="3">Reticulated Dry Fast Foam</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -314,33 +314,41 @@
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-3 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper">
                             <div>
-                                <p>Ties Image</p>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-1.png')?>">
                             </div>
-                            <br>
-                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                            <label><input type="radio" name="shape_radio" checked value="1">Square Corners</label>
                         </div>
-                        <div class="col-md-3 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper">
                             <div>
-                                <p>Ties Image</p>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-2.png')?>">
                             </div>
-                            <br>
-                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                            <label><input type="radio" name="shape_radio" value="2">Rounded Back Corners</label>
                         </div>
-                        <div class="col-md-3 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper">
                             <div>
-                                <p>Ties Image</p>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-3.png')?>">
                             </div>
-                            <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                            <label><input type="radio" name="shape_radio" value="3">All Corners Rounded</label>
                         </div>
-                        <div class="col-md-3 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper">
                             <div>
-                                <p>Ties Image</p>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-4.png')?>">
                             </div>
-                            <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 4</label>
+                            <label><input type="radio" name="shape_radio" value="3">Rounded Back</label>
+                        </div>
+                        <div class="col-md-4 ties-wrapper">
+                            <div>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-5.png')?>">
+                            </div>
+                            <label><input type="radio" name="shape_radio" value="3">Round</label>
+                        </div>
+                        <div class="col-md-4 ties-wrapper">
+                            <div>
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-6.png')?>">
+                            </div>
+                            <label><input type="radio" name="shape_radio" value="3">Trapezoid</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
