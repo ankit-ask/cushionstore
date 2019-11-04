@@ -12,15 +12,15 @@
         <div class="col-lg-2 product-qty-wrapper">
             <p>
                 <span>
-                    <button class="btn">
+                    <button class="btnsub">
                         -
                     </button>
                 </span>
-                <span>
-                    <input value="1">
+                <span class="product-qty">
+                    <input type="text" value="1">
                 </span>
                 <span>
-                    <button class="btn">
+                    <button class="btnadd">
                         +
                     </button>
                 </span>
@@ -54,7 +54,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/stepper/product-one/shapes/product-1-A.png')?>">
+                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-one/shapes/product-1-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -92,7 +92,6 @@
                         </div>
                     </div>   
                     <div class="clearfix"></div>
-
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
@@ -269,21 +268,21 @@
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyster-fiber.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" checked value="1">Polyster Fiber</label>
+                            <label><input type="radio" name="fill_radio" checked value="1">Polyster Fiber</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="2">Polyurethane Foam</label>
+                            <label><input type="radio" name="fill_radio" value="2">Polyurethane Foam</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/reticulated-dry-fast-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="3">Reticulated Dry Fast Foam</label>
+                            <label><input type="radio" name="fill_radio" value="3">Reticulated Dry Fast Foam</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -318,37 +317,37 @@
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-1.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" checked value="1">Square Corners</label>
+                            <label><input type="radio" name="ties_radio" checked value="1">Square Corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-2.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" value="2">Rounded Back Corners</label>
+                            <label><input type="radio" name="ties_radio" value="2">Rounded Back Corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-3.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" value="3">All Corners Rounded</label>
+                            <label><input type="radio" name="ties_radio" value="3">All Corners Rounded</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-4.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" value="3">Rounded Back</label>
+                            <label><input type="radio" name="ties_radio" value="3">Rounded Back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-5.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" value="3">Round</label>
+                            <label><input type="radio" name="ties_radio" value="3">Round</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-6.png')?>">
                             </div>
-                            <label><input type="radio" name="shape_radio" value="3">Trapezoid</label>
+                            <label><input type="radio" name="ties_radio" value="3">Trapezoid</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -462,5 +461,6 @@
 <!-- CTA Section Ends -->
 
 <?php $this->view('Assets/include_script.php') ?>
+<script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
 
 <?php $this->view('Components/footer.php') ?>
