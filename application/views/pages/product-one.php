@@ -12,15 +12,15 @@
         <div class="col-lg-2 product-qty-wrapper">
             <p>
                 <span>
-                    <button class="btn">
+                    <button class="btnsub">
                         -
                     </button>
                 </span>
-                <span>
-                    <input value="1">
+                <span class="product-qty">
+                    <input type="text" value="1">
                 </span>
                 <span>
-                    <button class="btn">
+                    <button class="btnadd">
                         +
                     </button>
                 </span>
@@ -54,7 +54,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/stepper/product-one/shapes/product-1-A.png')?>">
+                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-one/shapes/product-1-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -92,7 +92,6 @@
                         </div>
                     </div>   
                     <div class="clearfix"></div>
-
                     
                 </div>
                 <div class="col-lg-12 stepper-tab-btn-wrapper">
@@ -269,21 +268,21 @@
                                 Fill Image
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                            <label><input type="radio" name="fill_radio" checked value="1">Type 1</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
                                 Fill Image
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                            <label><input type="radio" name="fill_radio" value="2">Type 2</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
                                 Fill Image
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                            <label><input type="radio" name="fill_radio" value="3">Type 3</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -319,28 +318,28 @@
                                 <p>Ties Image</p>
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" checked value="1">Type 1</label>
+                            <label><input type="radio" name="ties_radio" checked value="1">Type 1</label>
                         </div>
                         <div class="col-md-3 ties-wrapper">
                             <div>
                                 <p>Ties Image</p>
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="2">Type 2</label>
+                            <label><input type="radio" name="ties_radio" value="2">Type 2</label>
                         </div>
                         <div class="col-md-3 ties-wrapper">
                             <div>
                                 <p>Ties Image</p>
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 3</label>
+                            <label><input type="radio" name="ties_radio" value="3">Type 3</label>
                         </div>
                         <div class="col-md-3 ties-wrapper">
                             <div>
                                 <p>Ties Image</p>
                             </div>
                             <br>
-                            <label><input type="radio" name="shape_radio" value="3">Type 4</label>
+                            <label><input type="radio" name="ties_radio" value="3">Type 4</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -454,5 +453,6 @@
 <!-- CTA Section Ends -->
 
 <?php $this->view('Assets/include_script.php') ?>
+<script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
 
 <?php $this->view('Components/footer.php') ?>
