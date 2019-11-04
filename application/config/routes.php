@@ -60,4 +60,6 @@ $route['product-one'] = 'Pages/Product_One_Controller';
 
 $route['cart'] = 'Pages/Cart_Controller';
 
-//TODO
+//ADMIN
+$route['admin/login'] = 'Admin/Login_Controller';
+$route['admin/dashboard'] = 'Admin/Dashboard_Controller';
