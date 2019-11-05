@@ -165,3 +165,9 @@ var setStyleReviewImage = (c) => {
 			break;
 	}
 };
+
+
+// Run Modal
+function openModal(){
+	$('#myModal').modal('show');
+}

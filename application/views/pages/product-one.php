@@ -157,29 +157,117 @@
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-12 dimension-preview">
-                            <p>Dimensions Image Goes Here</p>
+                            <p id="thickness-label">5" THICK</p>
+                            <div class="dimensions-img">
+                                <!-- <img src="<?php echo base_url('assets/images/stepper/product-one/seat-selet-square.png')?>"> -->
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/rounded.png')?>">
+                            <!-- </div> -->
+                            <p id="height-label">15"</p>
+                            <p id="width-label">25"</p>
+
+                            </div>
                         </div>
                         <div class="col-md-12 dimension-select-wrapper">
                             <p>CUSTOMIZE AS PER YOUR REQUIREMENT</p>
                             <select class="form-control" id="thickness">
-                                <option>1 INCH IN THICKNESS</option>
-                                <option>2 INCH IN THICKNESS</option>
-                                <option>3 INCH IN THICKNESS</option>
-                                <option>4 INCH IN THICKNESS</option>
+                                <option>2 THICKNESS</option>
+                                <option>3 THICKNESS</option>
+                                <option>4 THICKNESS</option>
                             </select>
 
                             <select class="form-control" id="depth">
-                                <option>1 INCH IN DEPTH</option>
-                                <option>2 INCH IN DEPTH</option>
-                                <option>3 INCH IN DEPTH</option>
-                                <option>4 INCH IN DEPTH</option>
+                                <option>8 DEPTH</option>
+                                <option>8.5 DEPTH</option>
+                                <option>9 DEPTH</option>
+                                <option>9.5 DEPTH</option>
+                                <option>10 DEPTH</option>
+                                <option>10.5 DEPTH</option>
+                                <option>11 DEPTH</option>
+                                <option>11.5 DEPTH</option>
+                                <option>12 DEPTH</option>
+                                <option>12.5 DEPTH</option>
+                                <option>13 DEPTH</option>
+                                <option>13.5 DEPTH</option>
+                                <option>14 DEPTH</option>
+                                <option>14.5 DEPTH</option>
+                                <option>15 DEPTH</option>
+                                <option>15.5 DEPTH</option>
+                                <option>16 DEPTH</option>
+                                <option>16.5 DEPTH</option>
+                                <option>17 DEPTH</option>
+                                <option>17.5 DEPTH</option>
+                                <option>18 DEPTH</option>
+                                <option>18.5 DEPTH</option>
+                                <option>19 DEPTH</option>
+                                <option>19.5 DEPTH</option>
+                                <option>20 DEPTH</option>
+                                <option>20.5 DEPTH</option>
+                                <option>21 DEPTH</option>
+                                <option>21.5 DEPTH</option>
+                                <option>22 DEPTH</option>
+                                <option>22.5 DEPTH</option>
+                                <option>23 DEPTH</option>
+                                <option>23.5 DEPTH</option>
+                                <option>24 DEPTH</option>
+                                <option>24.5 DEPTH</option>
+                                <option>25 DEPTH</option>
+                                <option>25.5 DEPTH</option>
+                                <option>26 DEPTH</option>
+                                <option>26.5 DEPTH</option>
+                                <option>27 DEPTH</option>
+                                <option>27.5 DEPTH</option>
+                                <option>28 DEPTH</option>
+                                <option>28.5 DEPTH</option>
+                                <option>29 DEPTH</option>
+                                <option>29.5 DEPTH</option>
+                                <option>30 DEPTH</option>
+                                <option>30.5 DEPTH</option>
+                                <option>31 DEPTH</option>
+                                <option>31.5 DEPTH</option>
+                                <option>32 DEPTH</option>
+                                <option>32.5 DEPTH</option>
+                                <option>33 DEPTH</option>
+                                <option>33.5 DEPTH</option>
+                                <option>34 DEPTH</option>
+                                <option>34.5 DEPTH</option>
+                                <option>35 DEPTH</option>
+                                <option>35.5 DEPTH</option>
+                                <option>36 DEPTH</option>
+                                <option>36.5 DEPTH</option>
+                                <option>37 DEPTH</option>
+                                <option>37.5 DEPTH</option>
+                                <option>38 DEPTH</option>
+                                <option>38.5 DEPTH</option>
+                                <option>39 DEPTH</option>
+                                <option>39.5 DEPTH</option>
+                                <option>40 DEPTH</option>
+                                <option>40.5 DEPTH</option>
+                                <option>41 DEPTH</option>
+                                <option>41.5 DEPTH</option>
+                                <option>42 DEPTH</option>
+                                <option>42.5 DEPTH</option>
+                                <option>43 DEPTH</option>
+                                <option>43.5 DEPTH</option>
+                                <option>44 DEPTH</option>
+                                <option>44.5 DEPTH</option>
+                                <option>45 DEPTH</option>
+                                <option>45.5 DEPTH</option>
+                                <option>46 DEPTH</option>
+                                <option>46.5 DEPTH</option>
+                                <option>47 DEPTH</option>
+                                <option>47.5 DEPTH</option>
+                                <option>48 DEPTH</option>
+                                <option>48.5 DEPTH</option>
+                                <option>49 DEPTH</option>
+                                <option>49.5 DEPTH</option>
+                                <option>50 DEPTH</option>
                             </select>
 
                             <select class="form-control" id="width">
-                                <option>1 INCH IN WIDTH</option>
-                                <option>2 INCH IN WIDTH</option>
-                                <option>3 INCH IN WIDTH</option>
-                                <option>4 INCH IN WIDTH</option>
+                                <option>1 WIDTH</option>
+                                <option>2 WIDTH</option>
+                                <option>3 WIDTH</option>
+                                <option>4 WIDTH</option>
                             </select>
                         </div>
                     </div>   
@@ -459,6 +547,37 @@
 
 </section>
 <!-- CTA Section Ends -->
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" onClick='openModal()'>
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 
 <?php $this->view('Assets/include_script.php') ?>
 <script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
