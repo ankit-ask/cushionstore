@@ -126,7 +126,7 @@
                         <div class="col-md-6 style-radio-wrapper boxed">
                             <img src="<?php echo base_url('assets/images/stepper/product-one/structure/boxed-edge.png')?>">
                             <br>
-                            <label><input type="radio" name="style_radio" value="2">Boxed Edge</label>
+                            <label><input type="radio" class="boxed-radio" name="style_radio" value="2">Boxed Edge</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -173,101 +173,27 @@
                                 <option>2 THICKNESS</option>
                                 <option>3 THICKNESS</option>
                                 <option>4 THICKNESS</option>
+                                <option>5 THICKNESS</option>
                             </select>
 
                             <select class="form-control" id="depth">
-                                <option>8 DEPTH</option>
-                                <option>8.5 DEPTH</option>
-                                <option>9 DEPTH</option>
-                                <option>9.5 DEPTH</option>
-                                <option>10 DEPTH</option>
-                                <option>10.5 DEPTH</option>
-                                <option>11 DEPTH</option>
-                                <option>11.5 DEPTH</option>
-                                <option>12 DEPTH</option>
-                                <option>12.5 DEPTH</option>
-                                <option>13 DEPTH</option>
-                                <option>13.5 DEPTH</option>
-                                <option>14 DEPTH</option>
-                                <option>14.5 DEPTH</option>
-                                <option>15 DEPTH</option>
-                                <option>15.5 DEPTH</option>
-                                <option>16 DEPTH</option>
-                                <option>16.5 DEPTH</option>
-                                <option>17 DEPTH</option>
-                                <option>17.5 DEPTH</option>
-                                <option>18 DEPTH</option>
-                                <option>18.5 DEPTH</option>
-                                <option>19 DEPTH</option>
-                                <option>19.5 DEPTH</option>
-                                <option>20 DEPTH</option>
-                                <option>20.5 DEPTH</option>
-                                <option>21 DEPTH</option>
-                                <option>21.5 DEPTH</option>
-                                <option>22 DEPTH</option>
-                                <option>22.5 DEPTH</option>
-                                <option>23 DEPTH</option>
-                                <option>23.5 DEPTH</option>
-                                <option>24 DEPTH</option>
-                                <option>24.5 DEPTH</option>
-                                <option>25 DEPTH</option>
-                                <option>25.5 DEPTH</option>
-                                <option>26 DEPTH</option>
-                                <option>26.5 DEPTH</option>
-                                <option>27 DEPTH</option>
-                                <option>27.5 DEPTH</option>
-                                <option>28 DEPTH</option>
-                                <option>28.5 DEPTH</option>
-                                <option>29 DEPTH</option>
-                                <option>29.5 DEPTH</option>
-                                <option>30 DEPTH</option>
-                                <option>30.5 DEPTH</option>
-                                <option>31 DEPTH</option>
-                                <option>31.5 DEPTH</option>
-                                <option>32 DEPTH</option>
-                                <option>32.5 DEPTH</option>
-                                <option>33 DEPTH</option>
-                                <option>33.5 DEPTH</option>
-                                <option>34 DEPTH</option>
-                                <option>34.5 DEPTH</option>
-                                <option>35 DEPTH</option>
-                                <option>35.5 DEPTH</option>
-                                <option>36 DEPTH</option>
-                                <option>36.5 DEPTH</option>
-                                <option>37 DEPTH</option>
-                                <option>37.5 DEPTH</option>
-                                <option>38 DEPTH</option>
-                                <option>38.5 DEPTH</option>
-                                <option>39 DEPTH</option>
-                                <option>39.5 DEPTH</option>
-                                <option>40 DEPTH</option>
-                                <option>40.5 DEPTH</option>
-                                <option>41 DEPTH</option>
-                                <option>41.5 DEPTH</option>
-                                <option>42 DEPTH</option>
-                                <option>42.5 DEPTH</option>
-                                <option>43 DEPTH</option>
-                                <option>43.5 DEPTH</option>
-                                <option>44 DEPTH</option>
-                                <option>44.5 DEPTH</option>
-                                <option>45 DEPTH</option>
-                                <option>45.5 DEPTH</option>
-                                <option>46 DEPTH</option>
-                                <option>46.5 DEPTH</option>
-                                <option>47 DEPTH</option>
-                                <option>47.5 DEPTH</option>
-                                <option>48 DEPTH</option>
-                                <option>48.5 DEPTH</option>
-                                <option>49 DEPTH</option>
-                                <option>49.5 DEPTH</option>
-                                <option>50 DEPTH</option>
+                                
                             </select>
 
                             <select class="form-control" id="width">
-                                <option>1 WIDTH</option>
-                                <option>2 WIDTH</option>
-                                <option>3 WIDTH</option>
-                                <option>4 WIDTH</option>
+                                
+                            </select>
+
+                            <select class="form-control" id="diameter">
+                                
+                            </select>
+
+                            <select class="form-control" id="backwidth">
+                                
+                            </select>
+
+                            <select class="form-control" id="frontwidth">
+                                
                             </select>
                         </div>
                     </div>   
@@ -308,7 +234,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 dimension-select-wrapper">
-                            <select class="form-control" id="thickness">
+                            <select class="form-control" id="trimming">
                                 <option>WITH TRIMMING</option>
                                 <option>NO TRIMMING</option>
                             </select>
@@ -317,7 +243,7 @@
                                 <i class="fas fa-angle-right"></i> SELECT CUSHION FABRIC
                             </button>
 
-                            <button class="btn btn-success fabric-select-btn">
+                            <button class="btn btn-success fabric-select-btn trimming-select-button">
                                 <i class="fas fa-angle-right"></i> SELECT TRIMMING
                             </button>
 
@@ -405,37 +331,37 @@
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-1.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" checked value="1">Square Corners</label>
+                            <label><input type="radio" class="square-corner-radio" name="ties_radio" checked value="1">None</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-2.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="2">Rounded Back Corners</label>
+                            <label><input type="radio" name="ties_radio" value="2">2 at back corners</label>
                         </div>
-                        <div class="col-md-4 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-3.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">All Corners Rounded</label>
+                            <label><input type="radio" name="ties_radio" value="3">2 ties at back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-4.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">Rounded Back</label>
+                            <label><input type="radio" name="ties_radio" value="4">4 ties at all corners</label>
                         </div>
-                        <div class="col-md-4 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-5.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">Round</label>
+                            <label><input type="radio" name="ties_radio" value="5">4 ties at front and back</label>
                         </div>
-                        <div class="col-md-4 ties-wrapper">
+                        <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-6.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">Trapezoid</label>
+                            <label><input type="radio" name="ties_radio" value="6">2 ties at sides</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -466,14 +392,14 @@
                         </button>
                     </div>
                     <div class="col-lg-6 panel-customization confirm-wrapper">
-                        <p><span>PRODUCT</span><span>Custom Seat Cushion</span></p>
-                        <p><span>SHAPE</span><span>Square Corners</span></p>
-                        <p><span>STYLE</span><span>Waterfall Edge</span></p>
-                        <p><span>DIMENSIONS</span><span>25W x 12L x 5T</span></p>
-                        <p><span>COVER FABRIC</span><span>Antique Beige 5422-0000</span></p>
-                        <p><span>TRIMMING FABRIC</span><span>Black 5408-0000</span></p>
-                        <p><span>FILL</span><span>Reticulated Dry-Fast Foam</span></p>
-                        <p><span>TIES</span><span>Yes</span></p>
+                        <p><span>PRODUCT</span><span id="productreview">Custom Seat Cushion</span></p>
+                        <p><span>SHAPE</span><span id="shapereview">Square Corners</span></p>
+                        <p><span>STYLE</span><span id="stylereview">Waterfall Edge</span></p>
+                        <p><span>DIMENSIONS</span><span id="dimensionsreview">25W x 12L x 5T</span></p>
+                        <p><span>COVER FABRIC</span><span id="coverreview"></span></p>
+                        <p><span>TRIMMING FABRIC</span><span id="trimmingreview"></span></p>
+                        <p><span>FILL</span><span id="fillreview">Reticulated Dry-Fast Foam</span></p>
+                        <p><span>TIES</span><span id="tiesreview">Yes</span></p>
                     </div>   
                     <div class="clearfix"></div>
 
