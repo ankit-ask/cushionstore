@@ -112,18 +112,18 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageStyleReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-6 style-radio-wrapper">
+                        <div class="col-md-6 style-radio-wrapper waterfall">
                             <img src="<?php echo base_url('assets/images/stepper/product-one/structure/waterfall-edge.png')?>">
                             <br>
-                            <label><input type="radio" name="style_radio" checked value="1">Waterfall Edge</label>
+                            <label><input type="radio" class="waterfall-radio" name="style_radio" checked value="1">Waterfall Edge</label>
                         </div>
-                        <div class="col-md-6 style-radio-wrapper">
+                        <div class="col-md-6 style-radio-wrapper boxed">
                             <img src="<?php echo base_url('assets/images/stepper/product-one/structure/boxed-edge.png')?>">
                             <br>
                             <label><input type="radio" name="style_radio" value="2">Boxed Edge</label>
@@ -150,7 +150,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageDimensionReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -205,7 +205,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageCoverReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -257,7 +257,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageFillReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -307,7 +307,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageTieReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
