@@ -952,3 +952,13 @@ footer .brand-tab span i{
 /* Footer Styles End*/
 /* ==================================================================== */
 
+.fabric-panel-nav{
+    background: #DADCDF;
+    padding: 10px;
+}
+
+.fabric-panel-nav a{
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5em;
+}

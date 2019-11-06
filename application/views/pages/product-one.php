@@ -247,7 +247,7 @@
                                 <option>NO TRIMMING</option>
                             </select>
 
-                            <button class="btn btn-success fabric-select-btn">
+                            <button class="btn btn-success fabric-select-btn" onClick='openModal()'>
                                 <i class="fas fa-angle-right"></i> SELECT CUSHION FABRIC
                             </button>
 
@@ -482,11 +482,6 @@
 </section>
 <!-- CTA Section Ends -->
 
-<!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" onClick='openModal()'>
-    Open modal
-  </button>
-
   <!-- The Modal -->
   <div class="modal trans-modal" id="myModal">
   <!-- <div class="modal fade" id="myModal"> -->
@@ -495,19 +490,35 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Choose Your Fabric</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-          Modal body..
+          
+            <ul class="nav nav-tabs fabric-panel-nav">
+                <li class="active"><a data-toggle="tab" href="#fabrics">FABRICS</a></li>
+                <li><a data-toggle="tab" href="#favorites">FAVORITES</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="fabrics" class="tab-pane in active">
+                <h3>FABRICS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="favorites" class="tab-pane">
+                <h3>FAVORITES</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
         </div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+        </div> -->
         
       </div>
     </div>
