@@ -159,14 +159,22 @@
                         <div class="col-md-12 dimension-preview">
                             <p id="thickness-label">5" THICK</p>
                             <div class="dimensions-img">
-                                <!-- <img src="<?php echo base_url('assets/images/stepper/product-one/seat-selet-square.png')?>"> -->
                                 <img src="<?php echo base_url('assets/images/stepper/product-one/rounded.png')?>">
-                            <!-- </div> -->
+                            </div>
                             <p id="height-label">15"</p>
                             <p id="width-label">25"</p>
-
-                            </div>
                         </div>
+
+                        <!-- <div class="col-md-12 dimension-preview">
+                            <p id="thickness-label">5" THICK</p>
+                            <p id="trapezoid-back-width-label">10"</p>
+                            <div class="trapezoid-dimensions-img">
+                                <img src="<?php echo base_url('assets/images/stepper/product-one/trapezoidal.png')?>">
+                            </div>
+                            <p id="trapezoid-height-label">15"</p>
+                            <p id="trapezoid-width-label">25"</p>
+                        </div> -->
+
                         <div class="col-md-12 dimension-select-wrapper">
                             <p>CUSTOMIZE AS PER YOUR REQUIREMENT</p>
                             <select class="form-control" id="thickness">
@@ -480,7 +488,8 @@
   </button>
 
   <!-- The Modal -->
-  <div class="modal fade" id="myModal">
+  <div class="modal trans-modal" id="myModal">
+  <!-- <div class="modal fade" id="myModal"> -->
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
       

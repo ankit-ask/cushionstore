@@ -569,9 +569,16 @@
 
 #thickness-label{
     padding-top: 10px;
+    margin-bottom: 0;
 }
 #height-label{
-    margin-left: 130px;
+    position: absolute;
+    top: 100px;
+    right: calc(50% - 100px);
+}
+#width-label{
+    padding-top: 10px;
+    margin-top: 35px;
 }
 .dimensions-img::before{
     content:'';
@@ -587,14 +594,58 @@
     /* height: 100px; */
     border-bottom: 1px solid;
     margin-left: -50px;
-    margin-top: -40px;
+    margin-top: 40px;
 }
 
 
-
-#width-label{
-    margin-top: -10px;
+/* Trapezoid */
+.trapezoid-dimensions-img{
+    height: 100px;
+    width: 100px;
+    margin: 0 calc(50% - 50px);
 }
+
+.trapezoid-dimensions-img img{
+    height: 100%;
+}
+
+#trapezoid-thickness-label{
+    padding-top: 10px;
+}
+
+#trapezoid-width-label{
+    padding-top: 10px;
+}
+
+#trapezoid-height-label{
+    position: absolute;
+    top: 100px;
+    right: calc(50% - 90px);
+}
+
+#trapezoid-back-width-label{
+    border-bottom: 1px solid;
+    width: 80px;
+    margin: 5px calc(50% - 40px);
+}
+
+.trapezoid-dimensions-img::before{
+    content:'';
+    position: absolute;
+    width: 70px;
+    height: 100px;
+    border-right: 1px solid;
+    margin-left: 40px;
+}
+.trapezoid-dimensions-img::after{
+    content:'';
+    position: absolute;
+    width: 100px;
+    border-bottom: 1px solid;
+    margin-left: -100px;
+    margin-top: 110px;
+}
+
 .dimension-select-wrapper{
     text-align: center;
 }
