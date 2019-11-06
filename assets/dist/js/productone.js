@@ -6,20 +6,25 @@ $(document).ready(function () {
 	$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 	$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 	$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
+	$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
+	$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/seat-selet-square.png');
 	$('.waterfall-radio').prop('checked', true);
 	if ($('.waterfall').hide()) {
 		$('.waterfall').show();
 	}
 
+	$('.othershape').show();
+	$('.trapezoid').hide();
+
 	var data = {
 		'product-1':
 		{
 			'shape': { 'index': 1, 'imageName': 'product-1-A', 'type': 'Square Corners' },
-			'structure': { 'index': 1, 'imageName': 'product-1-A-waterfall', 'type': 'waterfall edge' },
+			'structure': { 'index': 1, 'imageName': 'product-1-A-waterfall', 'type': 'Waterfall Edge' },
 			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth':0 },
 			'cover': { 'trimming': 'yes' },
 			'fill': { 'type': 'Polyster Fiber' },
-			'ties': {'type': 'none'}
+			'ties': {'type': 'None'}
 		}
 	}
 	localStorage.setItem('productDetail', JSON.stringify(data));
@@ -75,7 +80,7 @@ $(document).ready(function () {
 			if (checked === 3 || checked == 5 || checked == 6) {
 				$('.square-corner-radio').prop('checked', true);
 				// var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-				fetchedData['product-1'].ties.type = 'none';
+				fetchedData['product-1'].ties.type = 'None';
 				// localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			}
 		} else {
@@ -158,6 +163,8 @@ $(document).ready(function () {
 		fetchedData['product-1'].dimension.thickness = thick;
 		var ptag = document.getElementById('thickness-label');
 		ptag.innerHTML = thick + '"' + ' THICK';
+		ptag = document.getElementById('trapezoid-thickness-label');
+		ptag.innerHTML = thick + '"' + ' THICK';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
@@ -167,6 +174,8 @@ $(document).ready(function () {
 		var depth = parseFloat(($(this).val()).split(" ")[0]);
 		fetchedData['product-1'].dimension.depth = depth;
 		var ptag = document.getElementById('height-label');
+		ptag.innerHTML = depth + '"';
+		ptag = document.getElementById('trapezoid-height-label');
 		ptag.innerHTML = depth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
@@ -186,6 +195,10 @@ $(document).ready(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var diameter = parseFloat(($(this).val()).split(" ")[0]);
 		fetchedData['product-1'].dimension.diameter = diameter;
+		var ptag = document.getElementById('height-label');
+		ptag.innerHTML = diameter + '"';
+		ptag = document.getElementById('width-label');
+		ptag.innerHTML = diameter + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
@@ -194,6 +207,8 @@ $(document).ready(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var backwidth = parseFloat(($(this).val()).split(" ")[0]);
 		fetchedData['product-1'].dimension.backwidth = backwidth;
+		ptag = document.getElementById('trapezoid-back-width-label');
+		ptag.innerHTML = backwidth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
@@ -202,6 +217,8 @@ $(document).ready(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var frontwidth = parseFloat(($(this).val()).split(" ")[0]);
 		fetchedData['product-1'].dimension.frontwidth = frontwidth;
+		var ptag = document.getElementById('trapezoid-width-label');
+		ptag.innerHTML = frontwidth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
@@ -230,6 +247,19 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/seat-selet-square.png');
+
+			var ptag = document.getElementById('thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('width-label');
+			ptag.innerHTML = 8 + '"';
+
+			$('.othershape').show();
+			$('.trapezoid').hide();
+
 			$('.waterfall-radio').prop('checked', true);
 			if ($('.waterfall').hide()) {
 				$('.waterfall').show();
@@ -241,7 +271,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'Square Corners';
 			fetchedData['product-1'].structure.index = 1;
 			fetchedData['product-1'].structure.imageName = 'product-1-A-waterfall';
-			fetchedData['product-1'].structure.type = 'waterfall edge';
+			fetchedData['product-1'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
@@ -251,6 +281,19 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-B-waterfall.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-B-waterfall.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-B-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-B-waterfall.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/top-rounded-corners.png');
+
+			var ptag = document.getElementById('thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('width-label');
+			ptag.innerHTML = 8 + '"';
+
+			$('.othershape').show();
+			$('.trapezoid').hide();
+
 			$('.waterfall-radio').prop('checked', true);
 			if ($('.waterfall').hide()) {
 				$('.waterfall').show();
@@ -262,7 +305,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'Rounded Back Corners';
 			fetchedData['product-1'].structure.index = 1;
 			fetchedData['product-1'].structure.imageName = 'product-1-B-waterfall';
-			fetchedData['product-1'].structure.imageName = 'waterfall edge';
+			fetchedData['product-1'].structure.imageName = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 3:
@@ -272,6 +315,19 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/all-rounded-corners.png');
+
+			var ptag = document.getElementById('thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('width-label');
+			ptag.innerHTML = 8 + '"';
+
+			$('.othershape').show();
+			$('.trapezoid').hide();
+
 			$('.waterfall-radio').prop('checked', true);
 			if ($('.waterfall').hide()) {
 				$('.waterfall').show();
@@ -283,7 +339,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'All Corners Rounded';
 			fetchedData['product-1'].structure.index = 1;
 			fetchedData['product-1'].structure.imageName = 'product-1-C-waterfall';
-			fetchedData['product-1'].structure.type = 'waterfall edge';
+			fetchedData['product-1'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 4:
@@ -293,6 +349,19 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-D-waterfall.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-D-waterfall.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-D-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-D-waterfall.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/rounded-back.png');
+
+			var ptag = document.getElementById('thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('width-label');
+			ptag.innerHTML = 8 + '"';
+
+			$('.othershape').show();
+			$('.trapezoid').hide();
+
 			$('.waterfall-radio').prop('checked', true);
 			if ($('.waterfall').hide()) {
 				$('.waterfall').show();
@@ -304,7 +373,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'Rounded Back';
 			fetchedData['product-1'].structure.index = 1;
 			fetchedData['product-1'].structure.imageName = 'product-1-D-waterfall';
-			fetchedData['product-1'].structure.type = 'waterfall edge';
+			fetchedData['product-1'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 5:
@@ -314,10 +383,23 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-E-waterfall.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-E-waterfall.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-E-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-E-waterfall.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/rounded.png');
+
+			var ptag = document.getElementById('thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('width-label');
+			ptag.innerHTML = 8 + '"';
+
 			$('.waterfall-radio').prop('checked', true);
 			if ($('.waterfall').hide()) {
 				$('.waterfall').show();
 			}
+
+			$('.othershape').show();
+			$('.trapezoid').hide();
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-1'].shape.index = 5;
@@ -325,7 +407,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'Round';
 			fetchedData['product-1'].structure.index = 1;
 			fetchedData['product-1'].structure.imageName = 'product-1-E-waterfall';
-			fetchedData['product-1'].structure.type = 'waterfall edge';
+			fetchedData['product-1'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 6:
@@ -335,6 +417,21 @@ var setShapeReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
+			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/trapezoidal.png');
+
+			var ptag = document.getElementById('trapezoid-thickness-label');
+			ptag.innerHTML = 2 + '"' + ' THICK';
+			ptag = document.getElementById('trapezoid-back-width-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('trapezoid-height-label');
+			ptag.innerHTML = 8 + '"';
+			ptag = document.getElementById('trapezoid-width-label');
+			ptag.innerHTML = 8 + '"';
+
+			$('.othershape').hide();
+			$('.trapezoid').show();
+
 			$('.waterfall').hide();
 			$('.boxed-radio').prop('checked', true);
 
@@ -344,7 +441,7 @@ var setShapeReviewImage = (c) => {
 			fetchedData['product-1'].shape.type = 'Trapezoid';
 			fetchedData['product-1'].structure.index = 2;
 			fetchedData['product-1'].structure.imageName = 'product-1-F-boxed';
-			fetchedData['product-1'].structure.type = 'boxed edge';
+			fetchedData['product-1'].structure.type = 'Boxed Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
@@ -361,9 +458,10 @@ var setStyleReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			fetchedData['product-1'].structure.imageName = fetchedData['product-1'].shape.imageName + '-waterfall';
 			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.type = 'waterfall edge';
+			fetchedData['product-1'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
@@ -374,9 +472,10 @@ var setStyleReviewImage = (c) => {
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/' + imageName);
 			fetchedData['product-1'].structure.imageName = fetchedData['product-1'].shape.imageName + '-boxed';
 			fetchedData['product-1'].structure.index = 2;
-			fetchedData['product-1'].structure.type = 'boxed edge';
+			fetchedData['product-1'].structure.type = 'Boxed Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
@@ -404,7 +503,7 @@ var setTies = (c) => {
 	var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 	switch (c) {
 		case 1:
-			fetchedData['product-1'].ties.type = 'none';
+			fetchedData['product-1'].ties.type = 'None';
 			break;
 		case 2:
 			fetchedData['product-1'].ties.type = '2 at back corners';
