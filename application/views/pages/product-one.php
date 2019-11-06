@@ -157,13 +157,13 @@
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-12 dimension-preview">
-                            <p id="thickness-label">5" THICK</p>
+                            <p id="thickness-label">2" THICK</p>
                             <div class="dimensions-img">
                                 <!-- <img src="<?php echo base_url('assets/images/stepper/product-one/seat-selet-square.png')?>"> -->
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/rounded.png')?>">
+                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-one/rounded.png')?>">
                             <!-- </div> -->
-                            <p id="height-label">15"</p>
-                            <p id="width-label">25"</p>
+                            <p id="height-label">8"</p>
+                            <p id="width-label">8"</p>
 
                             </div>
                         </div>
@@ -386,7 +386,7 @@
                         <!-- <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p> -->
-                        <img src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
+                        <img id="imageConfirmReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
