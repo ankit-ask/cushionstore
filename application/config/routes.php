@@ -63,3 +63,12 @@ $route['cart'] = 'Pages/Cart_Controller';
 //ADMIN
 $route['admin/login'] = 'Admin/Login_Controller';
 $route['admin/dashboard'] = 'Admin/Dashboard_Controller';
+$route['admin/product/edit/1'] = 'Admin/ProductEdit_Controller/getData/1';
+$route['admin/product/edit/2'] = 'Admin/ProductEdit_Controller/getData/2';
+$route['admin/product/edit/3'] = 'Admin/ProductEdit_Controller/getData/3';
+$route['admin/product/edit/4'] = 'Admin/ProductEdit_Controller/getData/4';
+$route['admin/product/edit/5'] = 'Admin/ProductEdit_Controller/getData/5';
+$route['admin/product/edit/6'] = 'Admin/ProductEdit_Controller/getData/6';
+$route['admin/product/edit/7'] = 'Admin/ProductEdit_Controller/getData/7';
+$route['admin/product/edit/8'] = 'Admin/ProductEdit_Controller/getData/8';
+$route['api/fetchProductDetail/$1'] = 'Api/fetchProductDetail/(:any)';

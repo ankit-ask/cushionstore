@@ -134,6 +134,21 @@ class Api extends REST_Controller{
         	$this->response($result,$status);
     	}
                 
+	}
+	
+	public function fetchProductDetail_get($id)
+    {
+    	# code...
+    	// $token = $this->verify_token();
+
+    	$result = $this->Api_model->fetchProductDetail($id);
+
+    	$status = parent::HTTP_OK;
+
+    	$response = ['body' => $result, 'message' => 'Product Detail Fetched Successfully', 'status' => $status];
+
+    	$this->response($response, $status);
+
     }
 
 
