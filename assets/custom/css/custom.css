@@ -27,8 +27,18 @@
 } */
 
 
+input[type="radio"]{
+    margin-right: 5px;
+}
 .float-left{
     float: left;
+}
+.padding-top-10{
+    padding-top: 10px;
+}
+.scrollable-div{
+    height: 80%;
+    overflow-y: scroll;
 }
 /* ==================================================================== */
 /* Header Styles Begin*/
@@ -651,9 +661,9 @@
 }
 .dimension-select-wrapper select{
     float: left;
-    width: 30%;
+    width: 23%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-right: 3%;
+    margin-right: 2%;
 }
 
 .fabric-select-btn{
@@ -676,11 +686,20 @@
     float: left;
     background: #707070;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 3em;
+    padding: 0;
     height: 140px;
     width: 40%;
     margin: 2em 5%;
     color: #ffffff;
+}
+.fabric-sample-img img{
+    height: 100%;
+    width: 100%;
+}
+.fabric-sample-img p{
+    margin: 2em 5%;
+    color: #ffffff;
+    font-size: 2em;
 }
 
 .fill-wrapper{
@@ -952,13 +971,175 @@ footer .brand-tab span i{
 /* Footer Styles End*/
 /* ==================================================================== */
 
+
+/* Modals CSS */
+
+#trimmingModal .modal-header, #fabricModal .modal-header{
+    background: #E6E7E9;
+}
 .fabric-panel-nav{
-    background: #DADCDF;
+    /* background: #DADCDF; */
     padding: 10px;
+    border-bottom: 1px solid #E6E7E9;
+}
+
+.fabric-panel-nav li{
+    padding: 0 10px;
+}
+
+.fabric-panel-nav li.active{
+    border-bottom: 2px solid #707070;
 }
 
 .fabric-panel-nav a{
     color: #000000;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2em;
+}
+
+.fabric-panel-modal .tab-content{
+    margin-top: 20px;
+}
+
+.color-label{
+    float: left;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.color-icon{
+    width: 20px;
+    height: 20px;
+    background: chartreuse;
+    float: left;
+    margin: 2px;
+    border: 1px solid #000000;
+}
+
+.modal-search{
+    float: right;
+}
+
+.modal-search input{
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.modal-select{
+    font-size: 10px;
+}
+
+.modal-select select{
+    font-size: 12px;
+}
+
+.larger-modal{
+    width: 130%;
+    margin-left: -15%;;
+}
+
+.fabric-wrapper{
+    float: left;
+    padding: 10px;
+}
+.fabric-inner{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.favorite-wrapper{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    right: 20px;
+    border-radius: 20px;
+    background-image: url("../../images/heart.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.favorite-wrapper:hover{
+    background-image: url("../../images/selected-heart.png");
+    background-repeat: no-repeat;
+}
+
+/* .fabric-inner::after{
+    content:'';
+    position: absolute;
+    background:transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 20px -40px;
+    border-bottom: 1px solid;
+    border: 1px solid #000000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.fabric-inner:hover:after{
+    content:'';
+    position: absolute;
+    background:rgb(253, 20, 129);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 20px -40px;
+    border-bottom: 1px solid;
+} */
+
+
+.fabric-inner img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.fabric-item-label{
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.fabric-item-name{
+    padding: 10px;
+    margin: 0;
+}
+
+.fabric-item-code{
+    padding: 0 10px 5px 10px;
+    margin: 0;
+}
+
+.view-details-btn{
+    background: #707070;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+    opacity: 0.9;
+}
+
+.view-details-btn:hover{
+    opacity: 1;
+}
+
+
+.fabric-details-wrapper{
+    float: left;
+    padding: 10px;
+}
+
+.use-btn{
+        border-radius: 10px !important;
+}
+.fabric-details-inner{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+.fabric-details-inner img{
+    width: 100%;
+    border-radius: 10px;
 }

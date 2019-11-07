@@ -525,10 +525,20 @@ var setTies = (c) => {
 	setDataToReview();
 };
 
-// Run Modal
+// Opening Modals
 function openModal() {
-	$('#myModal').modal('show');
+	$('#fabricModal').modal('show');
 }
+function openTrimmingModal() {
+	$('#trimmingModal').modal('show');
+}
+function openFabricDetailsModal() {
+	$('#fabricDetailsModal').modal('show');
+}
+function openTrimmingDetailsModal() {
+	$('#trimmingDetailsModal').modal('show');
+}
+
 
 function setValueToDepthInDimension() {
 	for (var i = 8; i <= 50; i += 0.5) {

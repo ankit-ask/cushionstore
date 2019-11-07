@@ -236,10 +236,11 @@
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-12 dimension-preview">
                             <div class="col-md-6 fabric-sample-img">
-                                <p>Fabric Details</p>
+                                <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>"> 
                             </div>
                             <div class="col-md-6 fabric-sample-img">
-                                <p>Trimming Details</p>
+                                <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">    
+                                <!-- <p>No Trimming</p> -->
                             </div>
                         </div>
                         <div class="col-md-12 dimension-select-wrapper">
@@ -252,7 +253,7 @@
                                 <i class="fas fa-angle-right"></i> SELECT CUSHION FABRIC
                             </button>
 
-                            <button class="btn btn-success fabric-select-btn trimming-select-button">
+                            <button class="btn btn-default fabric-select-btn trimming-select-button" onClick='openTrimmingModal()'>
                                 <i class="fas fa-angle-right"></i> SELECT TRIMMING
                             </button>
 
@@ -483,48 +484,8 @@
 </section>
 <!-- CTA Section Ends -->
 
-  <!-- The Modal -->
-  <div class="modal trans-modal" id="myModal">
-  <!-- <div class="modal fade" id="myModal"> -->
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Choose Your Fabric</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          
-            <ul class="nav nav-tabs fabric-panel-nav">
-                <li class="active"><a data-toggle="tab" href="#fabrics">FABRICS</a></li>
-                <li><a data-toggle="tab" href="#favorites">FAVORITES</a></li>
-            </ul>
-
-            <div class="tab-content">
-                <div id="fabrics" class="tab-pane in active">
-                <h3>FABRICS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div id="favorites" class="tab-pane">
-                <h3>FAVORITES</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Modal footer -->
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div> -->
-        
-      </div>
-    </div>
-  </div>
-
+<?php $this->view('Components/Modals/select-fabric.php') ?>
+<?php $this->view('Components/Modals/select-trimming.php') ?>
 
 <?php $this->view('Assets/include_script.php') ?>
 <script src="<?php echo base_url(); ?>assets/dist/js/productone.js"></script>
