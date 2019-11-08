@@ -1062,6 +1062,18 @@ footer .brand-tab span i{
     background-position: center center;
 }
 
+.favorite-wrapper-selected{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    right: 20px;
+    border-radius: 20px;
+    background-image: url("../../images/selected-heart.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .favorite-wrapper:hover{
     background-image: url("../../images/selected-heart.png");
     background-repeat: no-repeat;

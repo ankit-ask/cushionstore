@@ -83,63 +83,21 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="scrollable-div">
-                    <div class="col-lg-3 fabric-wrapper">
-                        <div class="fabric-inner">
-                            <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                        </div>
-                        <span class="favorite-wrapper"></span>
-                        <div class="fabric-item-label">
-                            <p class="fabric-item-name">Test Name 1</p>
-                            <p class="fabric-item-code">CUS0001</p>
-                            <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 fabric-wrapper">
-                        <div class="fabric-inner">
-                            <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                        </div>
-                        <span class="favorite-wrapper"></span>
-                        <div class="fabric-item-label">
-                            <p class="fabric-item-name">Test Name 2</p>
-                            <p class="fabric-item-code">CUS0002</p>
-                            <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 fabric-wrapper">
-                        <div class="fabric-inner">
-                            <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                        </div>
-                        <span class="favorite-wrapper"></span>
-                        <div class="fabric-item-label">
-                            <p class="fabric-item-name">Test Name 3</p>
-                            <p class="fabric-item-code">CUS0003</p>
-                            <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 fabric-wrapper">
-                        <div class="fabric-inner">
-                            <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                        </div>
-                        <span class="favorite-wrapper"></span>
-                        <div class="fabric-item-label">
-                            <p class="fabric-item-name">Test Name 4</p>
-                            <p class="fabric-item-code">CUS0004</p>
-                            <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 fabric-wrapper">
-                        <div class="fabric-inner">
-                            <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                        </div>
-                        <span class="favorite-wrapper"></span>
-                        <div class="fabric-item-label">
-                            <p class="fabric-item-name">Test Name 5</p>
-                            <p class="fabric-item-code">CUS0005</p>
-                            <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                        </div>
-                    </div>
-                    
+                <div class="scrollable-div trimming-div">
+                    <?php 
+                        for($i = 1; $i <= 5; $i++) { ?>
+                             <div class="col-lg-3 fabric-wrapper SelectTrimming<?php echo $i; ?>">
+                                <div class="fabric-inner">
+                                    <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
+                                </div>
+                                <span class="favorite-wrapper selecttrimming<?php echo $i; ?>" onClick='moveTrimmingToFavourite(<?php echo $i; ?>)'></span>
+                                <div class="fabric-item-label">
+                                    <p class="fabric-item-name">Test Name <?php echo $i; ?></p>
+                                    <p class="fabric-item-code">CUS0001</p>
+                                    <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal(<?php echo $i; ?>)'>VIEW</button>
+                                </div>
+                            </div>
+                    <?php } ?>
                 </div>
 
                 <!-- <div class="clearfix"></div> -->
@@ -207,29 +165,8 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="scrollable-div">
-                        <div class="col-lg-3 fabric-wrapper">
-                            <div class="fabric-inner">
-                                <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                            </div>
-                            <span class="favorite-wrapper"></span>
-                            <div class="fabric-item-label">
-                                <p class="fabric-item-name">Test Name 1</p>
-                                <p class="fabric-item-code">CUS0001</p>
-                                <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 fabric-wrapper">
-                            <div class="fabric-inner">
-                                <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">
-                            </div>
-                            <span class="favorite-wrapper"></span>
-                            <div class="fabric-item-label">
-                                <p class="fabric-item-name">Test Name 2</p>
-                                <p class="fabric-item-code">CUS0002</p>
-                                <button class="btn btn-default view-details-btn" onClick='openTrimmingDetailsModal()'>VIEW</button>
-                            </div>
-                        </div>
+                    <div class="scrollable-div copyTrimmingToFavourite">
+                        <!-- bcsdbshbashbd -->
                     </div>
                 </div>
             </div>
@@ -254,7 +191,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">TRIMMING NAME - CUS001</h4>
+          <h4 class="modal-title modal-trimming-title"></h4>
           <button type="button" class="close" data-dismiss="modal"><i class="fa fa-arrow-left"></i> BACK</button>
         </div>
         
@@ -284,7 +221,7 @@
                             <p class="fabric-item-name"><span><strong>PATTERN - </strong></span>Solid</p>
                             <p class="fabric-item-name"><span><strong>MATERIAL - </strong></span>Acrylic - Solution Dyed</p>
                             <p class="fabric-item-name"><span><strong>WEIGHT - </strong></span>Approx. 8.0oz per sq. yard (271 grams per sq. meter) </p>
-                            <button class="btn btn-default view-details-btn use-btn">SELECT THIS TRIMMING</button>
+                            <button class="btn btn-default view-details-btn use-btn trimming-detail-button">SELECT THIS TRIMMING</button>
                         </div>
                         
                         <div class="clearfix"></div>

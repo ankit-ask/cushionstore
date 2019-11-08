@@ -21,10 +21,10 @@ $(document).ready(function () {
 		{
 			'shape': { 'index': 1, 'imageName': 'product-1-A', 'type': 'Square Corners' },
 			'structure': { 'index': 1, 'imageName': 'product-1-A-waterfall', 'type': 'Waterfall Edge' },
-			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth':0 },
-			'cover': { 'trimming': 'yes' },
+			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth': 0 },
+			'cover': { 'trimming': 'No', 'fabric': 'Test Name 1' },
 			'fill': { 'type': 'Polyster Fiber' },
-			'ties': {'type': 'None'}
+			'ties': { 'type': 'None' }
 		}
 	}
 	localStorage.setItem('productDetail', JSON.stringify(data));
@@ -39,7 +39,13 @@ $(document).ready(function () {
 	$('#frontwidth').hide();
 	$('#diameter').hide();
 
+	$('.trimming-select-button').attr('disabled', true);
+
 	setDataToReview();
+
+	setAllFavouriteFabricsOfUser();
+
+	setAllFavouriteTrimmingOfUser();
 
 	$('.previousbtn').click(function () {
 		$('.previousbtn').attr('disabled', true);
@@ -60,8 +66,6 @@ $(document).ready(function () {
 	$('.btnadd').click(function () {
 		var curVal = $('.product-qty > input:text').val();
 		$('.product-qty > input:text').val(parseInt(curVal) + 1);
-		// var price = $('.product-price > p').text();
-		// console.log(price);
 	});
 
 	$('.btnsub').click(function () {
@@ -79,9 +83,7 @@ $(document).ready(function () {
 			var checked = parseInt($('input[name=ties_radio]:checked').val());
 			if (checked === 3 || checked == 5 || checked == 6) {
 				$('.square-corner-radio').prop('checked', true);
-				// var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 				fetchedData['product-1'].ties.type = 'None';
-				// localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			}
 		} else {
 			$('.remove').show();
@@ -157,6 +159,20 @@ $(document).ready(function () {
 		setTies(parseInt(c));
 	});
 
+	$('.fabric-detail-button').click(function () {
+		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
+		fetchedData['product-1'].cover.fabric = $('.modal-fabric').text();
+		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
+		setDataToReview();
+	});
+
+	$('.trimming-detail-button').click(function () {
+		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
+		fetchedData['product-1'].cover.trimming = $('.modal-trimming-title').text();
+		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
+		setDataToReview();
+	});
+
 	$('#thickness').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var thick = parseFloat(($(this).val()).split(" ")[0]);
@@ -224,14 +240,14 @@ $(document).ready(function () {
 	});
 
 
-	$('#trimming').change(function () {
+	$('#trimmingoption').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		if ($(this).val() === 'NO TRIMMING') {
 			$('.trimming-select-button').attr('disabled', true);
-			fetchedData['product-1'].cover.trimming = 'no'
+			fetchedData['product-1'].cover.trimming = 'No';
 		} else {
 			$('.trimming-select-button').attr('disabled', false);
-			fetchedData['product-1'].cover.trimming = 'yes'
+			fetchedData['product-1'].cover.trimming = 'Test Name 1';
 		}
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
@@ -249,6 +265,14 @@ var setShapeReviewImage = (c) => {
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-A-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/seat-selet-square.png');
+
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-2.png');
+			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-3.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-4.png');
+			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-5.png');
+			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/square/tie-6.png');
 
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
@@ -284,6 +308,14 @@ var setShapeReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-B-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/top-rounded-corners.png');
 
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-2.png');
+			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-3.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-4.png');
+			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-5.png');
+			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back-corners/tie-6.png');
+
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
 			ptag = document.getElementById('height-label');
@@ -317,6 +349,14 @@ var setShapeReviewImage = (c) => {
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-C-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/all-rounded-corners.png');
+
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-2.png');
+			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-3.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-4.png');
+			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-5.png');
+			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/all-corners-rounded/tie-6.png');
 
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
@@ -352,6 +392,11 @@ var setShapeReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-D-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/rounded-back.png');
 
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back/tie-2.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/rounded-back/tie-3.png');
+
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
 			ptag = document.getElementById('height-label');
@@ -386,6 +431,11 @@ var setShapeReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-E-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/rounded.png');
 
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/round/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/round/tie-2.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/round/tie-3.png');
+
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
 			ptag = document.getElementById('height-label');
@@ -419,6 +469,14 @@ var setShapeReviewImage = (c) => {
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-one/shape-structure/product-1-F-boxed.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-one/trapezoidal.png');
+
+			// set shape to tie similar to selected shape
+			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-1.png');
+			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-2.png');
+			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-3.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-4.png');
+			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-5.png');
+			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-one/tie/trapezoid/tie-6.png');
 
 			var ptag = document.getElementById('trapezoid-thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';
@@ -529,14 +587,21 @@ var setTies = (c) => {
 function openModal() {
 	$('#fabricModal').modal('show');
 }
+
 function openTrimmingModal() {
 	$('#trimmingModal').modal('show');
 }
-function openFabricDetailsModal() {
+
+function openFabricDetailsModal(i) {
 	$('#fabricDetailsModal').modal('show');
+	var fabricName = $(`.scrollable-div:first .DetailView${i} > .fabric-item-label > p:first-of-type`).text();
+	$('.modal-fabric').text(fabricName);
 }
-function openTrimmingDetailsModal() {
+
+function openTrimmingDetailsModal(i) {
 	$('#trimmingDetailsModal').modal('show');
+	var trimmingName = $(`.trimming-div:first .SelectTrimming${i} > .fabric-item-label > p:first-of-type`).text();
+	$('.modal-trimming-title').text(trimmingName);
 }
 
 
@@ -580,11 +645,13 @@ function setDataToReview() {
 	var trimming = document.getElementById('trimmingreview');
 	var fill = document.getElementById('fillreview');
 	var ties = document.getElementById('tiesreview');
-	
+
 	shape.innerHTML = fetchedData['product-1'].shape.type;
 	style.innerHTML = fetchedData['product-1'].structure.type;
 	fill.innerHTML = fetchedData['product-1'].fill.type;
-	ties.innerHTML = fetchedData['product-1'].ties.type;  
+	ties.innerHTML = fetchedData['product-1'].ties.type;
+	cover.innerHTML = fetchedData['product-1'].cover.fabric;
+	trimming.innerHTML = fetchedData['product-1'].cover.trimming;
 
 	var selectedShape = fetchedData['product-1'].shape.index;
 	if (selectedShape === 5) {
@@ -593,5 +660,82 @@ function setDataToReview() {
 		dimensions.innerHTML = fetchedData['product-1'].dimension.frontwidth + ' Front' + ' x ' + fetchedData['product-1'].dimension.backwidth + ' Back' + ' x ' + fetchedData['product-1'].dimension.depth + ' Deep' + ' x ' + fetchedData['product-1'].dimension.thickness + ' Thick';
 	} else {
 		dimensions.innerHTML = fetchedData['product-1'].dimension.width + 'W' + ' x ' + fetchedData['product-1'].dimension.depth + 'L' + ' x ' + fetchedData['product-1'].dimension.thickness + 'T';
+	}
+}
+
+function moveFabricToFavourite(i) {
+	var fetchedFabricData = JSON.parse(localStorage.getItem('fabricData'));
+	if (!$(`.TestName${i} > span`).hasClass('favorite-wrapper-selected')) {
+		$(`.TestName${i}`).clone().appendTo('.copyToFavourite');
+		$(`.TestName${i} > span`).removeClass('favorite-wrapper');
+		$(`.TestName${i} > span`).addClass('favorite-wrapper-selected');
+		var data;
+		if (!fetchedFabricData) {
+			data = { 'favouritesFabric': [] };
+			data.favouritesFabric.push(`.TestName${i}`);
+			localStorage.setItem('fabricData', JSON.stringify(data));
+		} else {
+			fetchedFabricData.favouritesFabric.push(`.TestName${i}`);
+			localStorage.setItem('fabricData', JSON.stringify(fetchedFabricData));
+		}
+	} else {
+		$(`.TestName${i} > span`).removeClass('favorite-wrapper-selected');
+		$(`.TestName${i} > span`).addClass('favorite-wrapper');
+		$(`.copyToFavourite > .TestName${i}`).remove();
+		if (fetchedFabricData) {
+			var index = fetchedFabricData['favouritesFabric'].indexOf(`.TestName${i}`);
+			fetchedFabricData['favouritesFabric'].splice(index, 1);
+			localStorage.setItem('fabricData', JSON.stringify(fetchedFabricData));
+		}
+	}
+}
+
+function setAllFavouriteFabricsOfUser() {
+	var fetchedFabricData = JSON.parse(localStorage.getItem('fabricData'));
+	if (fetchedFabricData) {
+		fetchedFabricData['favouritesFabric'].forEach(function (item) {
+			$(item).clone().appendTo('.copyToFavourite');
+			$(`${item} > span`).removeClass('favorite-wrapper')
+			$(`${item} > span`).addClass('favorite-wrapper-selected')
+		});
+	}
+}
+
+function moveTrimmingToFavourite(i) {
+	var fetchedTrimmingData = JSON.parse(localStorage.getItem('trimmingData'));
+	if (!$(`.SelectTrimming${i} > span`).hasClass('favorite-wrapper-selected')) {
+		$(`.SelectTrimming${i}`).clone().appendTo('.copyTrimmingToFavourite');
+		$(`.SelectTrimming${i} > span`).removeClass('favorite-wrapper')
+		$(`.SelectTrimming${i} > span`).addClass('favorite-wrapper-selected')
+		var fetchedTrimmingData = JSON.parse(localStorage.getItem('trimmingData'));
+		var data;
+		if (!fetchedTrimmingData) {
+			data = { 'favouritesTrimming': [] };
+			data.favouritesTrimming.push(`.SelectTrimming${i}`);
+			localStorage.setItem('trimmingData', JSON.stringify(data));
+		} else {
+			fetchedTrimmingData.favouritesTrimming.push(`.SelectTrimming${i}`);
+			localStorage.setItem('trimmingData', JSON.stringify(fetchedTrimmingData));
+		}
+	} else {
+		$(`.SelectTrimming${i} > span`).removeClass('favorite-wrapper-selected');
+		$(`.SelectTrimming${i} > span`).addClass('favorite-wrapper');
+		$(`.copyTrimmingToFavourite > .SelectTrimming${i}`).remove();
+		if (fetchedTrimmingData) {
+			var index = fetchedTrimmingData['favouritesTrimming'].indexOf(`.SelectTrimming${i}`);
+			fetchedTrimmingData['favouritesTrimming'].splice(index, 1);
+			localStorage.setItem('trimmingData', JSON.stringify(fetchedTrimmingData));
+		}
+	}
+}
+
+function setAllFavouriteTrimmingOfUser() {
+	var fetchedTrimmingData = JSON.parse(localStorage.getItem('trimmingData'));
+	if (fetchedTrimmingData) {
+		fetchedTrimmingData['favouritesTrimming'].forEach(function (item) {
+			$(item).clone().appendTo('.copyTrimmingToFavourite');
+			$(`${item} > span`).removeClass('favorite-wrapper')
+			$(`${item} > span`).addClass('favorite-wrapper-selected')
+		});
 	}
 }

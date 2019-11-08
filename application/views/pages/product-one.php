@@ -244,9 +244,9 @@
                             </div>
                         </div>
                         <div class="col-md-12 dimension-select-wrapper">
-                            <select class="form-control" id="trimming">
-                                <option>WITH TRIMMING</option>
+                            <select class="form-control" id="trimmingoption">
                                 <option>NO TRIMMING</option>
+                                <option>WITH TRIMMING</option>
                             </select>
 
                             <button class="btn btn-success fabric-select-btn" onClick='openModal()'>
@@ -339,37 +339,37 @@
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-1.png')?>">
+                                <img class="ties1" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-1.png')?>">
                             </div>
                             <label><input type="radio" class="square-corner-radio" name="ties_radio" checked value="1">None</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-2.png')?>">
+                                <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-2.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="2">2 at back corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-3.png')?>">
+                                <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-3.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="3">2 ties at back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-4.png')?>">
+                                <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-4.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="4">4 ties at all corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-5.png')?>">
+                                <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-5.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="5">4 ties at front and back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-6.png')?>">
+                                <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-one/tie/square/tie-6.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="6">2 ties at sides</label>
                         </div>
