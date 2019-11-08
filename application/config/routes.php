@@ -57,6 +57,16 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['home'] = 'home';
 $route['product-one'] = 'Pages/Product_One_Controller';
+$route['product-two'] = 'Pages/Product_Two_Controller';
+$route['product-three-a'] = 'Pages/Product_Three_A_Controller';
+// $route['product-three-b'] = 'Pages/Product_Three_B_Controller';
+// $route['product-four'] = 'Pages/Product_Four_Controller';
+// $route['product-five-a'] = 'Pages/Product_Five_A_Controller';
+// $route['product-five-b'] = 'Pages/Product_Five_B_Controller';
+// $route['product-six'] = 'Pages/Product_Six_Controller';
+// $route['product-seven-a'] = 'Pages/Product_Seven_A_Controller';
+// $route['product-seven-b'] = 'Pages/Product_Seven_B_Controller';
+// $route['product-eight'] = 'Pages/Product_Eight_Controller';
 
 $route['cart'] = 'Pages/Cart_Controller';
 
