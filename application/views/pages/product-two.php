@@ -402,7 +402,7 @@
                         </button>
                     </div>
                     <div class="col-lg-6 panel-customization confirm-wrapper">
-                        <p><span>PRODUCT</span><span id="productreview">Custom Seat Cushion</span></p>
+                        <p><span>PRODUCT</span><span id="productreview">Custom Bench Cushions</span></p>
                         <p><span>SHAPE</span><span id="shapereview">Square Corners</span></p>
                         <p><span>STYLE</span><span id="stylereview">Waterfall Edge</span></p>
                         <p><span>DIMENSIONS</span><span id="dimensionsreview">25W x 12L x 5T</span></p>

@@ -17,7 +17,7 @@ $(document).ready(function () {
 	$('.trapezoid').hide();
 
 	var data = {
-		'product-1':
+		'product-2':
 		{
 			'shape': { 'index': 1, 'imageName': 'product-2-A', 'type': 'Square Corners' },
 			'structure': { 'index': 1, 'imageName': 'product-2-A-waterfall', 'type': 'Waterfall Edge' },
@@ -80,12 +80,12 @@ $(document).ready(function () {
 	$('input[name=shape_radio]').click(function () {
 		var c = $('input[name=shape_radio]:checked').val();
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		if (parseInt(c) === 4 || parseInt(c) === 5) {
+		if (parseInt(c) === 5) {
 			$('.remove').hide();
 			var checked = parseInt($('input[name=ties_radio]:checked').val());
 			if (checked === 3 || checked == 5 || checked == 6) {
 				$('.square-corner-radio').prop('checked', true);
-				fetchedData['product-1'].ties.type = 'None';
+				fetchedData['product-2'].ties.type = 'None';
 			}
 		} else {
 			$('.remove').show();
@@ -98,12 +98,12 @@ $(document).ready(function () {
 			$('#frontwidth').hide();
 			$('#diameter').show();
 			$('#thickness').show();
-			fetchedData['product-1'].dimension.depth = 0;
-			fetchedData['product-1'].dimension.width = 0;
-			fetchedData['product-1'].dimension.backwidth = 0;
-			fetchedData['product-1'].dimension.frontwidth = 0;
-			fetchedData['product-1'].dimension.diameter = 8;
-			fetchedData['product-1'].dimension.thickness = 2;
+			fetchedData['product-2'].dimension.depth = 0;
+			fetchedData['product-2'].dimension.width = 0;
+			fetchedData['product-2'].dimension.backwidth = 0;
+			fetchedData['product-2'].dimension.frontwidth = 0;
+			fetchedData['product-2'].dimension.diameter = 8;
+			fetchedData['product-2'].dimension.thickness = 2;
 			$('#diameter').prop('selectedIndex', 0);
 			$('#thickness').prop('selectedIndex', 0);
 		} else if (parseInt(c) === 6) {
@@ -113,12 +113,12 @@ $(document).ready(function () {
 			$('#frontwidth').show();
 			$('#diameter').hide();
 			$('#thickness').show();
-			fetchedData['product-1'].dimension.width = 0;
-			fetchedData['product-1'].dimension.diameter = 0;
-			fetchedData['product-1'].dimension.depth = 8;
-			fetchedData['product-1'].dimension.backwidth = 8;
-			fetchedData['product-1'].dimension.frontwidth = 8;
-			fetchedData['product-1'].dimension.thickness = 2;
+			fetchedData['product-2'].dimension.width = 0;
+			fetchedData['product-2'].dimension.diameter = 0;
+			fetchedData['product-2'].dimension.depth = 8;
+			fetchedData['product-2'].dimension.backwidth = 8;
+			fetchedData['product-2'].dimension.frontwidth = 8;
+			fetchedData['product-2'].dimension.thickness = 2;
 			$('#depth').prop('selectedIndex', 0);
 			$('#backwidth').prop('selectedIndex', 0);
 			$('#frontwidth').prop('selectedIndex', 0);
@@ -130,12 +130,12 @@ $(document).ready(function () {
 			$('#frontwidth').hide();
 			$('#diameter').hide();
 			$('#thickness').show();
-			fetchedData['product-1'].dimension.diameter = 0;
-			fetchedData['product-1'].dimension.backwidth = 0;
-			fetchedData['product-1'].dimension.frontwidth = 0;
-			fetchedData['product-1'].dimension.width = 8;
-			fetchedData['product-1'].dimension.depth = 8;
-			fetchedData['product-1'].dimension.thickness = 2;
+			fetchedData['product-2'].dimension.diameter = 0;
+			fetchedData['product-2'].dimension.backwidth = 0;
+			fetchedData['product-2'].dimension.frontwidth = 0;
+			fetchedData['product-2'].dimension.width = 8;
+			fetchedData['product-2'].dimension.depth = 8;
+			fetchedData['product-2'].dimension.thickness = 2;
 			$('#depth').prop('selectedIndex', 0);
 			$('#width').prop('selectedIndex', 0);
 			$('#thickness').prop('selectedIndex', 0);
@@ -163,7 +163,7 @@ $(document).ready(function () {
 
 	$('.fabric-detail-button').click(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		fetchedData['product-1'].cover.fabric = $('.modal-fabric').text();
+		fetchedData['product-2'].cover.fabric = $('.modal-fabric').text();
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 		$('#fabricDetailsModal').modal('hide');
@@ -172,7 +172,7 @@ $(document).ready(function () {
 
 	$('.trimming-detail-button').click(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		fetchedData['product-1'].cover.trimming = $('.modal-trimming-title').text();
+		fetchedData['product-2'].cover.trimming = $('.modal-trimming-title').text();
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 		$('#trimmingDetailsModal').modal('hide');
@@ -182,7 +182,7 @@ $(document).ready(function () {
 	$('#thickness').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var thick = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.thickness = thick;
+		fetchedData['product-2'].dimension.thickness = thick;
 		var ptag = document.getElementById('thickness-label');
 		ptag.innerHTML = thick + '"' + ' THICK';
 		ptag = document.getElementById('trapezoid-thickness-label');
@@ -194,7 +194,7 @@ $(document).ready(function () {
 	$('#depth').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var depth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.depth = depth;
+		fetchedData['product-2'].dimension.depth = depth;
 		var ptag = document.getElementById('height-label');
 		ptag.innerHTML = depth + '"';
 		ptag = document.getElementById('trapezoid-height-label');
@@ -206,7 +206,7 @@ $(document).ready(function () {
 	$('#width').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var width = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.width = width;
+		fetchedData['product-2'].dimension.width = width;
 		var ptag = document.getElementById('width-label');
 		ptag.innerHTML = width + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -216,7 +216,7 @@ $(document).ready(function () {
 	$('#diameter').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var diameter = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.diameter = diameter;
+		fetchedData['product-2'].dimension.diameter = diameter;
 		var ptag = document.getElementById('height-label');
 		ptag.innerHTML = diameter + '"';
 		ptag = document.getElementById('width-label');
@@ -228,7 +228,7 @@ $(document).ready(function () {
 	$('#backwidth').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var backwidth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.backwidth = backwidth;
+		fetchedData['product-2'].dimension.backwidth = backwidth;
 		ptag = document.getElementById('trapezoid-back-width-label');
 		ptag.innerHTML = backwidth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -238,7 +238,7 @@ $(document).ready(function () {
 	$('#frontwidth').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		var frontwidth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-1'].dimension.frontwidth = frontwidth;
+		fetchedData['product-2'].dimension.frontwidth = frontwidth;
 		var ptag = document.getElementById('trapezoid-width-label');
 		ptag.innerHTML = frontwidth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -250,13 +250,13 @@ $(document).ready(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 		if ($(this).val() === 'NO TRIMMING') {
 			$('.trimming-select-button').attr('disabled', true);
-			fetchedData['product-1'].cover.trimming = 'No';
+			fetchedData['product-2'].cover.trimming = 'No';
 			$('#trimming-fabric-img').hide();
 			$('#trimming-fabric-alt').show();
 
 		} else {
 			$('.trimming-select-button').attr('disabled', false);
-			fetchedData['product-1'].cover.trimming = 'Test Name 1';
+			fetchedData['product-2'].cover.trimming = 'Test Name 1';
 			$('#trimming-fabric-img').show();
 			$('#trimming-fabric-alt').hide();
 		}
@@ -301,12 +301,12 @@ var setShapeReviewImage = (c) => {
 			}
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 1;
-			fetchedData['product-1'].shape.imageName = 'product-2-A';
-			fetchedData['product-1'].shape.type = 'Square Corners';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.imageName = 'product-2-A-waterfall';
-			fetchedData['product-1'].structure.type = 'Waterfall Edge';
+			fetchedData['product-2'].shape.index = 1;
+			fetchedData['product-2'].shape.imageName = 'product-2-A';
+			fetchedData['product-2'].shape.type = 'Square Corners';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.imageName = 'product-2-A-waterfall';
+			fetchedData['product-2'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
@@ -343,12 +343,12 @@ var setShapeReviewImage = (c) => {
 			}
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 2;
-			fetchedData['product-1'].shape.imageName = 'product-2-B';
-			fetchedData['product-1'].shape.type = 'Rounded Back Corners';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.imageName = 'product-2-B-waterfall';
-			fetchedData['product-1'].structure.imageName = 'Waterfall Edge';
+			fetchedData['product-2'].shape.index = 2;
+			fetchedData['product-2'].shape.imageName = 'product-2-B';
+			fetchedData['product-2'].shape.type = 'Rounded Back Corners';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.imageName = 'product-2-B-waterfall';
+			fetchedData['product-2'].structure.imageName = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 3:
@@ -385,12 +385,12 @@ var setShapeReviewImage = (c) => {
 			}
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 3;
-			fetchedData['product-1'].shape.imageName = 'product-2-C';
-			fetchedData['product-1'].shape.type = 'All Corners Rounded';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.imageName = 'product-2-C-waterfall';
-			fetchedData['product-1'].structure.type = 'Waterfall Edge';
+			fetchedData['product-2'].shape.index = 3;
+			fetchedData['product-2'].shape.imageName = 'product-2-C';
+			fetchedData['product-2'].shape.type = 'All Corners Rounded';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.imageName = 'product-2-C-waterfall';
+			fetchedData['product-2'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 4:
@@ -424,22 +424,22 @@ var setShapeReviewImage = (c) => {
 			}
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 4;
-			fetchedData['product-1'].shape.imageName = 'product-2-D';
-			fetchedData['product-1'].shape.type = 'Rounded Back';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.imageName = 'product-2-D-waterfall';
-			fetchedData['product-1'].structure.type = 'Waterfall Edge';
+			fetchedData['product-2'].shape.index = 4;
+			fetchedData['product-2'].shape.imageName = 'product-2-D';
+			fetchedData['product-2'].shape.type = 'Rounded Back';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.imageName = 'product-2-D-waterfall';
+			fetchedData['product-2'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 5:
-			$('#imageShapeReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shapes/product-1-E.png');
-			$('#imageStyleReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
-			$('#imageDimensionReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
-			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
-			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
-			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
-			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-1-E-waterfall.png');
+			$('#imageShapeReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shapes/product-2-E.png');
+			$('#imageStyleReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
+			$('#imageDimensionReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
+			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
+			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
+			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
+			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/product-2-E-waterfall.png');
 			$('#imageShowingDimension').attr("src", WEB_URL + '/assets/images/stepper/product-two/rounded.png');
 
 			// set shape to tie similar to selected shape
@@ -463,12 +463,12 @@ var setShapeReviewImage = (c) => {
 			$('.trapezoid').hide();
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 5;
-			fetchedData['product-1'].shape.imageName = 'product-1-E';
-			fetchedData['product-1'].shape.type = 'Round';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.imageName = 'product-1-E-waterfall';
-			fetchedData['product-1'].structure.type = 'Waterfall Edge';
+			fetchedData['product-2'].shape.index = 5;
+			fetchedData['product-2'].shape.imageName = 'product-2-E';
+			fetchedData['product-2'].shape.type = 'Round';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.imageName = 'product-2-E-waterfall';
+			fetchedData['product-2'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 6:
@@ -505,12 +505,12 @@ var setShapeReviewImage = (c) => {
 			$('.boxed-radio').prop('checked', true);
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			fetchedData['product-1'].shape.index = 6;
-			fetchedData['product-1'].shape.imageName = 'product-1-F';
-			fetchedData['product-1'].shape.type = 'Trapezoid';
-			fetchedData['product-1'].structure.index = 2;
-			fetchedData['product-1'].structure.imageName = 'product-1-F-boxed';
-			fetchedData['product-1'].structure.type = 'Boxed Edge';
+			fetchedData['product-2'].shape.index = 6;
+			fetchedData['product-2'].shape.imageName = 'product-2-F';
+			fetchedData['product-2'].shape.type = 'Trapezoid';
+			fetchedData['product-2'].structure.index = 2;
+			fetchedData['product-2'].structure.imageName = 'product-2-F-boxed';
+			fetchedData['product-2'].structure.type = 'Boxed Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
@@ -521,30 +521,30 @@ var setStyleReviewImage = (c) => {
 	switch (c) {
 		case 1:
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			var imageName = fetchedData['product-1'].shape.imageName + '-waterfall.png';
+			var imageName = fetchedData['product-2'].shape.imageName + '-waterfall.png';
 			$('#imageStyleReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageDimensionReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
-			fetchedData['product-1'].structure.imageName = fetchedData['product-1'].shape.imageName + '-waterfall';
-			fetchedData['product-1'].structure.index = 1;
-			fetchedData['product-1'].structure.type = 'Waterfall Edge';
+			fetchedData['product-2'].structure.imageName = fetchedData['product-2'].shape.imageName + '-waterfall';
+			fetchedData['product-2'].structure.index = 1;
+			fetchedData['product-2'].structure.type = 'Waterfall Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-			var imageName = fetchedData['product-1'].shape.imageName + '-boxed.png';
+			var imageName = fetchedData['product-2'].shape.imageName + '-boxed.png';
 			$('#imageStyleReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageDimensionReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageCoverReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageFillReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageTieReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-two/shape-structure/' + imageName);
-			fetchedData['product-1'].structure.imageName = fetchedData['product-1'].shape.imageName + '-boxed';
-			fetchedData['product-1'].structure.index = 2;
-			fetchedData['product-1'].structure.type = 'Boxed Edge';
+			fetchedData['product-2'].structure.imageName = fetchedData['product-2'].shape.imageName + '-boxed';
+			fetchedData['product-2'].structure.index = 2;
+			fetchedData['product-2'].structure.type = 'Boxed Edge';
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
@@ -555,13 +555,13 @@ var setFill = (c) => {
 	var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 	switch (c) {
 		case 1:
-			fetchedData['product-1'].fill.type = 'Polyster Fiber';
+			fetchedData['product-2'].fill.type = 'Polyster Fiber';
 			break;
 		case 2:
-			fetchedData['product-1'].fill.type = 'Polyurethane Foam';
+			fetchedData['product-2'].fill.type = 'Polyurethane Foam';
 			break;
 		case 3:
-			fetchedData['product-1'].fill.type = 'Reticulated Dry Fast Foam';
+			fetchedData['product-2'].fill.type = 'Reticulated Dry Fast Foam';
 			break;
 	}
 	localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -572,22 +572,22 @@ var setTies = (c) => {
 	var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 	switch (c) {
 		case 1:
-			fetchedData['product-1'].ties.type = 'None';
+			fetchedData['product-2'].ties.type = 'None';
 			break;
 		case 2:
-			fetchedData['product-1'].ties.type = '2 at back corners';
+			fetchedData['product-2'].ties.type = '2 at back corners';
 			break;
 		case 3:
-			fetchedData['product-1'].ties.type = '2 ties at back';
+			fetchedData['product-2'].ties.type = '2 ties at back';
 			break;
 		case 4:
-			fetchedData['product-1'].ties.type = '4 ties at all corners';
+			fetchedData['product-2'].ties.type = '4 ties at all corners';
 			break;
 		case 5:
-			fetchedData['product-1'].ties.type = '4 ties at front and back';
+			fetchedData['product-2'].ties.type = '4 ties at front and back';
 			break;
 		case 6:
-			fetchedData['product-1'].ties.type = '2 ties at sides';
+			fetchedData['product-2'].ties.type = '2 ties at sides';
 			break;
 	}
 	localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -657,20 +657,20 @@ function setDataToReview() {
 	var fill = document.getElementById('fillreview');
 	var ties = document.getElementById('tiesreview');
 
-	shape.innerHTML = fetchedData['product-1'].shape.type;
-	style.innerHTML = fetchedData['product-1'].structure.type;
-	fill.innerHTML = fetchedData['product-1'].fill.type;
-	ties.innerHTML = fetchedData['product-1'].ties.type;
-	cover.innerHTML = fetchedData['product-1'].cover.fabric;
-	trimming.innerHTML = fetchedData['product-1'].cover.trimming;
+	shape.innerHTML = fetchedData['product-2'].shape.type;
+	style.innerHTML = fetchedData['product-2'].structure.type;
+	fill.innerHTML = fetchedData['product-2'].fill.type;
+	ties.innerHTML = fetchedData['product-2'].ties.type;
+	cover.innerHTML = fetchedData['product-2'].cover.fabric;
+	trimming.innerHTML = fetchedData['product-2'].cover.trimming;
 
-	var selectedShape = fetchedData['product-1'].shape.index;
+	var selectedShape = fetchedData['product-2'].shape.index;
 	if (selectedShape === 5) {
-		dimensions.innerHTML = fetchedData['product-1'].dimension.diameter + ' Diameter' + ' x ' + fetchedData['product-1'].dimension.thickness + ' Thick';
+		dimensions.innerHTML = fetchedData['product-2'].dimension.diameter + ' Diameter' + ' x ' + fetchedData['product-2'].dimension.thickness + ' Thick';
 	} else if (selectedShape === 6) {
-		dimensions.innerHTML = fetchedData['product-1'].dimension.frontwidth + ' Front' + ' x ' + fetchedData['product-1'].dimension.backwidth + ' Back' + ' x ' + fetchedData['product-1'].dimension.depth + ' Deep' + ' x ' + fetchedData['product-1'].dimension.thickness + ' Thick';
+		dimensions.innerHTML = fetchedData['product-2'].dimension.frontwidth + ' Front' + ' x ' + fetchedData['product-2'].dimension.backwidth + ' Back' + ' x ' + fetchedData['product-2'].dimension.depth + ' Deep' + ' x ' + fetchedData['product-2'].dimension.thickness + ' Thick';
 	} else {
-		dimensions.innerHTML = fetchedData['product-1'].dimension.width + 'W' + ' x ' + fetchedData['product-1'].dimension.depth + 'L' + ' x ' + fetchedData['product-1'].dimension.thickness + 'T';
+		dimensions.innerHTML = fetchedData['product-2'].dimension.width + 'W' + ' x ' + fetchedData['product-2'].dimension.depth + 'L' + ' x ' + fetchedData['product-2'].dimension.thickness + 'T';
 	}
 }
 
