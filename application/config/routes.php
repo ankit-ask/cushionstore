@@ -64,9 +64,9 @@ $route['product-four'] = 'Pages/Product_Four_Controller';
 $route['product-five-a'] = 'Pages/Product_Five_A_Controller';
 $route['product-five-b'] = 'Pages/Product_Five_B_Controller';
 $route['product-six'] = 'Pages/Product_Six_Controller';
-// $route['product-seven-a'] = 'Pages/Product_Seven_A_Controller';
-// $route['product-seven-b'] = 'Pages/Product_Seven_B_Controller';
 $route['product-eight'] = 'Pages/Product_Eight_Controller';
+$route['product-seven-a'] = 'Pages/Product_Seven_A_Controller';
+$route['product-seven-b'] = 'Pages/Product_Seven_B_Controller';
 
 $route['cart'] = 'Pages/Cart_Controller';
 
