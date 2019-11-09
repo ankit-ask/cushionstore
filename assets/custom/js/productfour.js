@@ -402,19 +402,19 @@ var setTies = (c) => {
 			fetchedData['product-4'].ties.type = 'None';
 			break;
 		case 2:
-			fetchedData['product-4'].ties.type = '2 at back corners';
+			fetchedData['product-4'].ties.type = '4 ties at hinge and sides of back';
 			break;
 		case 3:
-			fetchedData['product-4'].ties.type = '2 ties at back';
+			fetchedData['product-4'].ties.type = '6 ties at hinge and sides of seat and back';
 			break;
 		case 4:
-			fetchedData['product-4'].ties.type = '4 ties at all corners';
+			fetchedData['product-4'].ties.type = '2 ties at hinge';
 			break;
 		case 5:
-			fetchedData['product-4'].ties.type = '4 ties at front and back';
+			fetchedData['product-4'].ties.type = '4 ties at hinge and back corners';
 			break;
 		case 6:
-			fetchedData['product-4'].ties.type = '2 ties at sides';
+			fetchedData['product-4'].ties.type = '6  ties at hinge, seat corners and back corners';
 			break;
 	}
 	localStorage.setItem('productDetail', JSON.stringify(fetchedData));

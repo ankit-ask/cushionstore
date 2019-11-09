@@ -337,31 +337,31 @@
                             <div>
                                 <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-2.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="2">2 at back corners</label>
+                            <label><input type="radio" name="ties_radio" value="2">4 ties at hinge and sides of back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-3.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">2 ties at back</label>
+                            <label><input type="radio" name="ties_radio" value="3">6 ties at hinge and sides of seat and back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-4.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="4">4 ties at all corners</label>
+                            <label><input type="radio" name="ties_radio" value="4">2 ties at hinge</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-5.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="5">4 ties at front and back</label>
+                            <label><input type="radio" name="ties_radio" value="5">4 ties at hinge and back corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-6.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="6">2 ties at sides</label>
+                            <label><input type="radio" name="ties_radio" value="6">6  ties at hinge, seat corners and back corners</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>

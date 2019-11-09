@@ -4,7 +4,7 @@
 
     <div class="product-section-header">
         <div class="col-lg-6 product-name">
-            <p>CUSTOM CHAISE CUSHIONS</p>
+            <p>CUSTOM CHAISE CUSHION</p>
         </div>
         <div class="col-lg-2 product-price">
             <p>$123.45</p>
@@ -112,7 +112,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageStyleReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageStyleReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -150,31 +150,22 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageDimensionReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageDimensionReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-12 dimension-preview othershape">
+                        
+                        <div class="col-md-12 dimension-preview allshapes">
                             <p id="thickness-label">2" THICK</p>
-                            <div class="dimensions-img">
-                                <!-- <img src="<?php echo base_url('assets/images/stepper/product-six/seat-selet-square.png')?>"> -->
-                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-six/modern-clean.png')?>">
+                            <p id="back-label">8"</p>
+                            <div class="trapezoid-dimensions-img">
+                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-six/traditional-sectioned.png')?>">
                             </div>
-                            <p id="height-label">8"</p>
+                            <p id="seat-label">8"</p>
                             <p id="width-label">8"</p>
                         </div>
-
-                        <!-- <div class="col-md-12 dimension-preview trapezoid">
-                            <p id="trapezoid-thickness-label">5" THICK</p>
-                            <p id="trapezoid-back-width-label">10"</p>
-                            <div class="trapezoid-dimensions-img">
-                                <img src="<?php echo base_url('assets/images/stepper/product-six/trapezoidal.png')?>">
-                            </div>
-                            <p id="trapezoid-height-label">15"</p>
-                            <p id="trapezoid-width-label">25"</p>
-                        </div> -->
 
                         <div class="col-md-12 dimension-select-wrapper">
                             <p>CUSTOMIZE AS PER YOUR REQUIREMENT</p>
@@ -182,28 +173,27 @@
                                 <option>2 THICKNESS</option>
                                 <option>3 THICKNESS</option>
                                 <option>4 THICKNESS</option>
-                                <option>5 THICKNESS</option>
                             </select>
 
-                            <select class="form-control" id="depth">
+                            <!-- <select class="form-control" id="depth">
                                 
-                            </select>
+                            </select> -->
 
                             <select class="form-control" id="width">
                                 
                             </select>
 
-                            <select class="form-control" id="diameter">
+                            <select class="form-control" id="back">
                                 
                             </select>
 
-                            <select class="form-control" id="backwidth">
+                            <select class="form-control" id="seat">
                                 
                             </select>
 
-                            <select class="form-control" id="frontwidth">
+                            <!-- <select class="form-control" id="frontwidth">
                                 
-                            </select>
+                            </select> -->
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -228,7 +218,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageCoverReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageCoverReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -281,27 +271,27 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageFillReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageFillReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper polyster">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyster-fiber.jpg')?>">
                             </div>
                             <br>
                             <label><input type="radio" name="fill_radio" checked value="1">Polyster Fiber</label>
                         </div>
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper polyurethane">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
                             <label><input type="radio" name="fill_radio" value="2">Polyurethane Foam</label>
                         </div>
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper reticulated">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/reticulated-dry-fast-foam.jpg')?>">
                             </div>
@@ -331,7 +321,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageTieReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageTieReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -347,31 +337,31 @@
                             <div>
                                 <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-six/tie/modern-clean/tie-2.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="2">2 at back corners</label>
+                            <label><input type="radio" name="ties_radio" value="2">4 ties at hinge and sides of back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-six/tie/modern-clean/tie-3.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="3">2 ties at back</label>
+                            <label><input type="radio" name="ties_radio" value="3">6 ties at hinge and sides of seat and back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
                                 <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-six/tie/modern-clean/tie-4.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="4">4 ties at all corners</label>
+                            <label><input type="radio" name="ties_radio" value="4">2 ties at hinge</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-six/tie/modern-clean/tie-5.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="5">4 ties at front and back</label>
+                            <label><input type="radio" name="ties_radio" value="5">4 ties at hinge and back corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
                                 <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-six/tie/modern-clean/tie-6.png')?>">
                             </div>
-                            <label><input type="radio" name="ties_radio" value="6">2 ties at sides</label>
+                            <label><input type="radio" name="ties_radio" value="6">6  ties at hinge, seat corners and back corners</label>
                         </div>
                     </div>   
                     <div class="clearfix"></div>
@@ -396,7 +386,7 @@
                         <!-- <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p> -->
-                        <img id="imageConfirmReview" src="<?php echo base_url('assets/images/stepper/product-six/shapes/product-6-A.png')?>">
+                        <img id="imageConfirmReview" src="<?php echo base_url('assets/images/products/product-img-1.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>

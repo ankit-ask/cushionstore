@@ -1,8 +1,8 @@
 var BASE_URL = "http://cushionstore.technomize.com/api/";
 var DASHBOARD_URL = "http://cushionstore.technomize.com/admin/dashboard";
 
-var WEB_URL = "http://localhost/cushionstore";
-// var WEB_URL = "http://localhost:1234/cushionstore";
+// var WEB_URL = "http://localhost/cushionstore";
+var WEB_URL = "http://localhost:1234/cushionstore";
 
 var COMAPNY_NAME = "CUSHION STORE";
 

@@ -13,31 +13,23 @@ $(document).ready(function () {
 		$('.waterfall').show();
 	}
 
-	$('.othershape').show();
-	$('.trapezoid').hide();
-
 	var data = {
 		'product-6':
 		{
-			'shape': { 'index': 1, 'imageName': 'product-6-A', 'type': 'Square Corners' },
+			'shape': { 'index': 1, 'imageName': 'product-6-A', 'type': 'Modern Clean' },
 			'structure': { 'index': 1, 'imageName': 'product-6-A-waterfall', 'type': 'Waterfall Edge' },
-			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth': 0 },
+			'dimension': { 'thickness': 2, 'width': 8, 'back': 8, 'seat': 8 },
 			'cover': { 'trimming': 'No', 'fabric': 'Test Name 1' },
 			'fill': { 'type': 'Polyster Fiber' },
-			'ties': { 'type': 'None' }
+			'ties': { 'type': 'None' },
+			'productName': 'Custom Chaise Cushion'
 		}
 	}
 	localStorage.setItem('productDetail', JSON.stringify(data));
 
-	setValueToDepthInDimension();
 	setValueToWidthInDimension();
-	setValueToDiameterInDimension();
-	setValueToBackWidthInDimension();
-	setValueToFrontWidthInDimension();
-
-	$('#backwidth').hide();
-	$('#frontwidth').hide();
-	$('#diameter').hide();
+	setValueTobackInDimension();
+	setValueToseatInDimension();
 
 	$('.trimming-select-button').attr('disabled', true);
 	$('#trimming-fabric-img').hide();
@@ -79,70 +71,6 @@ $(document).ready(function () {
 
 	$('input[name=shape_radio]').click(function () {
 		var c = $('input[name=shape_radio]:checked').val();
-		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		if (parseInt(c) === 4 || parseInt(c) === 5) {
-			$('.remove').hide();
-			var checked = parseInt($('input[name=ties_radio]:checked').val());
-			if (checked === 3 || checked == 5 || checked == 6) {
-				$('.square-corner-radio').prop('checked', true);
-				fetchedData['product-6'].ties.type = 'None';
-			}
-		} else {
-			$('.remove').show();
-		}
-
-		if (parseInt(c) === 5) {
-			$('#depth').hide();
-			$('#width').hide();
-			$('#backwidth').hide();
-			$('#frontwidth').hide();
-			$('#diameter').show();
-			$('#thickness').show();
-			fetchedData['product-6'].dimension.depth = 0;
-			fetchedData['product-6'].dimension.width = 0;
-			fetchedData['product-6'].dimension.backwidth = 0;
-			fetchedData['product-6'].dimension.frontwidth = 0;
-			fetchedData['product-6'].dimension.diameter = 8;
-			fetchedData['product-6'].dimension.thickness = 2;
-			$('#diameter').prop('selectedIndex', 0);
-			$('#thickness').prop('selectedIndex', 0);
-		} else if (parseInt(c) === 6) {
-			$('#depth').show();
-			$('#width').hide();
-			$('#backwidth').show();
-			$('#frontwidth').show();
-			$('#diameter').hide();
-			$('#thickness').show();
-			fetchedData['product-6'].dimension.width = 0;
-			fetchedData['product-6'].dimension.diameter = 0;
-			fetchedData['product-6'].dimension.depth = 8;
-			fetchedData['product-6'].dimension.backwidth = 8;
-			fetchedData['product-6'].dimension.frontwidth = 8;
-			fetchedData['product-6'].dimension.thickness = 2;
-			$('#depth').prop('selectedIndex', 0);
-			$('#backwidth').prop('selectedIndex', 0);
-			$('#frontwidth').prop('selectedIndex', 0);
-			$('#thickness').prop('selectedIndex', 0);
-		} else {
-			$('#depth').show();
-			$('#width').show();
-			$('#backwidth').hide();
-			$('#frontwidth').hide();
-			$('#diameter').hide();
-			$('#thickness').show();
-			fetchedData['product-6'].dimension.diameter = 0;
-			fetchedData['product-6'].dimension.backwidth = 0;
-			fetchedData['product-6'].dimension.frontwidth = 0;
-			fetchedData['product-6'].dimension.width = 8;
-			fetchedData['product-6'].dimension.depth = 8;
-			fetchedData['product-6'].dimension.thickness = 2;
-			$('#depth').prop('selectedIndex', 0);
-			$('#width').prop('selectedIndex', 0);
-			$('#thickness').prop('selectedIndex', 0);
-		}
-
-		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
-
 		setShapeReviewImage(parseInt(c));
 	});
 
@@ -185,20 +113,6 @@ $(document).ready(function () {
 		fetchedData['product-6'].dimension.thickness = thick;
 		var ptag = document.getElementById('thickness-label');
 		ptag.innerHTML = thick + '"' + ' THICK';
-		ptag = document.getElementById('trapezoid-thickness-label');
-		ptag.innerHTML = thick + '"' + ' THICK';
-		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
-		setDataToReview();
-	});
-
-	$('#depth').change(function () {
-		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		var depth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-6'].dimension.depth = depth;
-		var ptag = document.getElementById('height-label');
-		ptag.innerHTML = depth + '"';
-		ptag = document.getElementById('trapezoid-height-label');
-		ptag.innerHTML = depth + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
@@ -213,38 +127,25 @@ $(document).ready(function () {
 		setDataToReview();
 	});
 
-	$('#diameter').change(function () {
+	$('#back').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		var diameter = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-6'].dimension.diameter = diameter;
-		var ptag = document.getElementById('height-label');
-		ptag.innerHTML = diameter + '"';
-		ptag = document.getElementById('width-label');
-		ptag.innerHTML = diameter + '"';
+		var back = parseFloat(($(this).val()).split(" ")[0]);
+		fetchedData['product-6'].dimension.back = back;
+		var ptag = document.getElementById('back-label');
+		ptag.innerHTML = back + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
 
-	$('#backwidth').change(function () {
+	$('#seat').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		var backwidth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-6'].dimension.backwidth = backwidth;
-		ptag = document.getElementById('trapezoid-back-width-label');
-		ptag.innerHTML = backwidth + '"';
+		var seat = parseFloat(($(this).val()).split(" ")[0]);
+		fetchedData['product-6'].dimension.seat = seat;
+		ptag = document.getElementById('seat-label');
+		ptag.innerHTML = seat + '"';
 		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 		setDataToReview();
 	});
-
-	$('#frontwidth').change(function () {
-		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
-		var frontwidth = parseFloat(($(this).val()).split(" ")[0]);
-		fetchedData['product-6'].dimension.frontwidth = frontwidth;
-		var ptag = document.getElementById('trapezoid-width-label');
-		ptag.innerHTML = frontwidth + '"';
-		localStorage.setItem('productDetail', JSON.stringify(fetchedData));
-		setDataToReview();
-	});
-
 
 	$('#trimmingoption').change(function () {
 		var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
@@ -285,25 +186,10 @@ var setShapeReviewImage = (c) => {
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-clean/tie-5.png');
 			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-clean/tie-6.png');
 
-			var ptag = document.getElementById('thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.othershape').show();
-			$('.trapezoid').hide();
-
-			$('.waterfall-radio').prop('checked', true);
-			if ($('.waterfall').hide()) {
-				$('.waterfall').show();
-			}
-
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 1;
 			fetchedData['product-6'].shape.imageName = 'product-6-A';
-			fetchedData['product-6'].shape.type = 'Square Corners';
+			fetchedData['product-6'].shape.type = 'Modern Clean';
 			fetchedData['product-6'].structure.index = 1;
 			fetchedData['product-6'].structure.imageName = 'product-6-A-waterfall';
 			fetchedData['product-6'].structure.type = 'Waterfall Edge';
@@ -327,25 +213,10 @@ var setShapeReviewImage = (c) => {
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-tufted/tie-5.png');
 			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-tufted/tie-6.png');
 
-			var ptag = document.getElementById('thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.othershape').show();
-			$('.trapezoid').hide();
-
-			$('.waterfall-radio').prop('checked', true);
-			if ($('.waterfall').hide()) {
-				$('.waterfall').show();
-			}
-
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 2;
 			fetchedData['product-6'].shape.imageName = 'product-6-B';
-			fetchedData['product-6'].shape.type = 'Rounded Back Corners';
+			fetchedData['product-6'].shape.type = 'Modern Tufted';
 			fetchedData['product-6'].structure.index = 1;
 			fetchedData['product-6'].structure.imageName = 'product-6-B-waterfall';
 			fetchedData['product-6'].structure.imageName = 'Waterfall Edge';
@@ -369,25 +240,10 @@ var setShapeReviewImage = (c) => {
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-sectioned/tie-5.png');
 			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/modern-sectioned/tie-6.png');
 
-			var ptag = document.getElementById('thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.othershape').show();
-			$('.trapezoid').hide();
-
-			$('.waterfall-radio').prop('checked', true);
-			if ($('.waterfall').hide()) {
-				$('.waterfall').show();
-			}
-
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 3;
 			fetchedData['product-6'].shape.imageName = 'product-6-C';
-			fetchedData['product-6'].shape.type = 'All Corners Rounded';
+			fetchedData['product-6'].shape.type = 'Modern Sectioned';
 			fetchedData['product-6'].structure.index = 1;
 			fetchedData['product-6'].structure.imageName = 'product-6-C-waterfall';
 			fetchedData['product-6'].structure.type = 'Waterfall Edge';
@@ -406,30 +262,15 @@ var setShapeReviewImage = (c) => {
 			// set shape to tie similar to selected shape
 			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-1.png');
 			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-2.png');
-			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-3.png');
-			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-4.png');
+            $('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-3.png');
+            $('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-4.png');
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-5.png');
 			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-clean/tie-6.png');
-
-			var ptag = document.getElementById('thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.othershape').show();
-			$('.trapezoid').hide();
-
-			$('.waterfall-radio').prop('checked', true);
-			if ($('.waterfall').hide()) {
-				$('.waterfall').show();
-			}
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 4;
 			fetchedData['product-6'].shape.imageName = 'product-6-D';
-			fetchedData['product-6'].shape.type = 'Rounded Back';
+			fetchedData['product-6'].shape.type = 'Traditional Clean';
 			fetchedData['product-6'].structure.index = 1;
 			fetchedData['product-6'].structure.imageName = 'product-6-D-waterfall';
 			fetchedData['product-6'].structure.type = 'Waterfall Edge';
@@ -448,30 +289,15 @@ var setShapeReviewImage = (c) => {
 			// set shape to tie similar to selected shape
 			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-1.png');
 			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-2.png');
-			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-3.png');
-			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-4.png');
+            $('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-3.png');
+            $('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-4.png');
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-5.png');
-			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-6.png');
-
-			var ptag = document.getElementById('thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.waterfall-radio').prop('checked', true);
-			if ($('.waterfall').hide()) {
-				$('.waterfall').show();
-			}
-
-			$('.othershape').show();
-			$('.trapezoid').hide();
+            $('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-tufted/tie-6.png');
 
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 5;
 			fetchedData['product-6'].shape.imageName = 'product-6-E';
-			fetchedData['product-6'].shape.type = 'Round';
+			fetchedData['product-6'].shape.type = 'Traditional Tufted';
 			fetchedData['product-6'].structure.index = 1;
 			fetchedData['product-6'].structure.imageName = 'product-6-E-waterfall';
 			fetchedData['product-6'].structure.type = 'Waterfall Edge';
@@ -495,25 +321,10 @@ var setShapeReviewImage = (c) => {
 			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-sectioned/tie-5.png');
 			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-six/tie/traditional-sectioned/tie-6.png');
 
-			var ptag = document.getElementById('trapezoid-thickness-label');
-			ptag.innerHTML = 2 + '"' + ' THICK';
-			ptag = document.getElementById('trapezoid-back-width-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('trapezoid-height-label');
-			ptag.innerHTML = 8 + '"';
-			ptag = document.getElementById('trapezoid-width-label');
-			ptag.innerHTML = 8 + '"';
-
-			$('.othershape').hide();
-			$('.trapezoid').show();
-
-			$('.waterfall').hide();
-			$('.boxed-radio').prop('checked', true);
-
 			var fetchedData = JSON.parse(localStorage.getItem('productDetail'));
 			fetchedData['product-6'].shape.index = 6;
 			fetchedData['product-6'].shape.imageName = 'product-6-F';
-			fetchedData['product-6'].shape.type = 'Trapezoid';
+			fetchedData['product-6'].shape.type = 'Traditional Sectioned';
 			fetchedData['product-6'].structure.index = 2;
 			fetchedData['product-6'].structure.imageName = 'product-6-F-boxed';
 			fetchedData['product-6'].structure.type = 'Boxed Edge';
@@ -536,7 +347,12 @@ var setStyleReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-six/shape-structure/' + imageName);
 			fetchedData['product-6'].structure.imageName = fetchedData['product-6'].shape.imageName + '-waterfall';
 			fetchedData['product-6'].structure.index = 1;
-			fetchedData['product-6'].structure.type = 'Waterfall Edge';
+            fetchedData['product-6'].structure.type = 'Waterfall Edge';
+            
+            $('.polyster').show();
+            $('.polyster > label > input:radio').prop('checked', true);
+            fetchedData['product-6'].fill.type = 'Polyster Fiber';
+
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
@@ -550,7 +366,12 @@ var setStyleReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-six/shape-structure/' + imageName);
 			fetchedData['product-6'].structure.imageName = fetchedData['product-6'].shape.imageName + '-boxed';
 			fetchedData['product-6'].structure.index = 2;
-			fetchedData['product-6'].structure.type = 'Boxed Edge';
+            fetchedData['product-6'].structure.type = 'Boxed Edge';
+            
+            $('.polyster').hide();
+            $('.polyurethane > label > input:radio').prop('checked', true);
+            fetchedData['product-6'].fill.type = 'Polyurethane Foam';
+
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
@@ -581,19 +402,19 @@ var setTies = (c) => {
 			fetchedData['product-6'].ties.type = 'None';
 			break;
 		case 2:
-			fetchedData['product-6'].ties.type = '2 at back corners';
+			fetchedData['product-6'].ties.type = '4 ties at hinge and sides of back';
 			break;
 		case 3:
-			fetchedData['product-6'].ties.type = '2 ties at back';
+			fetchedData['product-6'].ties.type = '6 ties at hinge and sides of seat and back';
 			break;
 		case 4:
-			fetchedData['product-6'].ties.type = '4 ties at all corners';
+			fetchedData['product-6'].ties.type = '2 ties at hinge';
 			break;
 		case 5:
-			fetchedData['product-6'].ties.type = '4 ties at front and back';
+			fetchedData['product-6'].ties.type = '4 ties at hinge and back corners';
 			break;
 		case 6:
-			fetchedData['product-6'].ties.type = '2 ties at sides';
+			fetchedData['product-6'].ties.type = '6  ties at hinge, seat corners and back corners';
 			break;
 	}
 	localStorage.setItem('productDetail', JSON.stringify(fetchedData));
@@ -621,34 +442,21 @@ function openTrimmingDetailsModal(i) {
 	$('.modal-trimming-title').text(trimmingName);
 }
 
-
-function setValueToDepthInDimension() {
-	for (var i = 8; i <= 50; i += 0.5) {
-		$('#depth').append(`<option>${i} DEPTH</option>`);
-	}
-}
-
 function setValueToWidthInDimension() {
 	for (var i = 8; i <= 50; i += 0.5) {
 		$('#width').append(`<option>${i} WIDTH</option>`);
 	}
 }
 
-function setValueToDiameterInDimension() {
+function setValueTobackInDimension() {
 	for (var i = 8; i <= 50; i += 0.5) {
-		$('#diameter').append(`<option>${i} DIAMETER</option>`);
+		$('#back').append(`<option>${i} BACK</option>`);
 	}
 }
 
-function setValueToBackWidthInDimension() {
+function setValueToseatInDimension() {
 	for (var i = 8; i <= 50; i += 0.5) {
-		$('#backwidth').append(`<option>${i} BACK WIDTH</option>`);
-	}
-}
-
-function setValueToFrontWidthInDimension() {
-	for (var i = 8; i <= 50; i += 0.5) {
-		$('#frontwidth').append(`<option>${i} FRONT WIDTH</option>`);
+		$('#seat').append(`<option>${i} SEAT</option>`);
 	}
 }
 
@@ -668,16 +476,9 @@ function setDataToReview() {
 	fill.innerHTML = fetchedData['product-6'].fill.type;
 	ties.innerHTML = fetchedData['product-6'].ties.type;
 	cover.innerHTML = fetchedData['product-6'].cover.fabric;
-	trimming.innerHTML = fetchedData['product-6'].cover.trimming;
+    trimming.innerHTML = fetchedData['product-6'].cover.trimming;
+    dimensions.innerHTML = fetchedData['product-6'].dimension.width + 'W' + ' x ' + fetchedData['product-6'].dimension.seat + 'S' + ' x ' + fetchedData['product-6'].dimension.back + 'B' + ' x ' + fetchedData['product-6'].dimension.thickness + 'T';
 
-	var selectedShape = fetchedData['product-6'].shape.index;
-	if (selectedShape === 5) {
-		dimensions.innerHTML = fetchedData['product-6'].dimension.diameter + ' Diameter' + ' x ' + fetchedData['product-6'].dimension.thickness + ' Thick';
-	} else if (selectedShape === 6) {
-		dimensions.innerHTML = fetchedData['product-6'].dimension.frontwidth + ' Front' + ' x ' + fetchedData['product-6'].dimension.backwidth + ' Back' + ' x ' + fetchedData['product-6'].dimension.depth + ' Deep' + ' x ' + fetchedData['product-6'].dimension.thickness + ' Thick';
-	} else {
-		dimensions.innerHTML = fetchedData['product-6'].dimension.width + 'W' + ' x ' + fetchedData['product-6'].dimension.depth + 'L' + ' x ' + fetchedData['product-6'].dimension.thickness + 'T';
-	}
 }
 
 function moveFabricToFavourite(i) {
