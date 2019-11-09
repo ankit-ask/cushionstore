@@ -24,7 +24,8 @@ $(document).ready(function () {
 			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth': 0 },
 			'cover': { 'trimming': 'No', 'fabric': 'Test Name 1' },
 			'fill': { 'type': 'Polyurethane Foam' },
-			'ties': { 'type': 'None' }
+			'ties': { 'type': 'None' },
+			'productName': 'Custom Bench Cushions'
 		}
 	}
 	localStorage.setItem('productDetail', JSON.stringify(data));
@@ -406,7 +407,10 @@ var setShapeReviewImage = (c) => {
 			// set shape to tie similar to selected shape
 			$('.ties1').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-1.png');
 			$('.ties2').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-2.png');
-			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-3.png');
+			$('.ties3').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-3.png');
+			$('.ties4').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-4.png');
+			$('.ties5').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-5.png');
+			$('.ties6').attr("src", WEB_URL + '/assets/images/stepper/product-two/tie/rounded-back/tie-6.png');
 
 			var ptag = document.getElementById('thickness-label');
 			ptag.innerHTML = 2 + '"' + ' THICK';

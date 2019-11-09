@@ -24,7 +24,8 @@ $(document).ready(function () {
 			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth': 0 },
 			'cover': { 'trimming': 'No', 'fabric': 'Test Name 1' },
 			'fill': { 'type': 'Polyurethane Foam' },
-			'ties': { 'type': 'None' }
+			'ties': { 'type': 'None' },
+			'productName': 'Custom Bench Back Pads'
 		}
 	}
 	localStorage.setItem('productDetail', JSON.stringify(data));
