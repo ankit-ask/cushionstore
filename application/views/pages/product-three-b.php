@@ -4,7 +4,7 @@
 
     <div class="product-section-header">
         <div class="col-lg-6 product-name">
-            <p>CUSTOM CHAIR BACK PADS</p>
+            <p>CUSTOM BENCH BACK PADS</p>
         </div>
         <div class="col-lg-2 product-price">
             <p>$123.45</p>
@@ -54,34 +54,34 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-A/square.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/square.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" checked value="1">Square Corners</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-A/top-rounded-corners.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/top-rounded-corners.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="2">Rounded Top Corners</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-A/all-rounded-corners.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/all-rounded-corners.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="3">All Corners Rounded</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-A/rounded-top.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/rounded-top.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="4">Rounded Top</label>
                         </div>
                         <!-- <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-A/rounded.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/rounded.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="5">Round</label>
                         </div>
@@ -112,19 +112,19 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageStyleReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageStyleReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-6 style-radio-wrapper waterfall">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-a/structure/waterfall-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/structure/waterfall-edge.png')?>">
                             <br>
                             <label><input type="radio" class="waterfall-radio" name="style_radio" checked value="1">Waterfall Edge</label>
                         </div>
                         <div class="col-md-6 style-radio-wrapper boxed">
-                            <img src="<?php echo base_url('assets/images/stepper/product-three-a/structure/boxed-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-three-b/structure/boxed-edge.png')?>">
                             <br>
                             <label><input type="radio" class="boxed-radio" name="style_radio" value="2">Boxed Edge</label>
                         </div>
@@ -150,7 +150,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageDimensionReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageDimensionReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -159,8 +159,8 @@
                         <div class="col-md-12 dimension-preview othershape">
                             <p id="thickness-label">2" THICK</p>
                             <div class="dimensions-img">
-                                <!-- <img src="<?php echo base_url('assets/images/stepper/product-three-a/seat-selet-square.png')?>"> -->
-                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-three-a/rounded.png')?>">
+                                <!-- <img src="<?php echo base_url('assets/images/stepper/product-three-b/seat-selet-square.png')?>"> -->
+                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-three-b/rounded.png')?>">
                             </div>
                             <p id="height-label">8"</p>
                             <p id="width-label">8"</p>
@@ -170,7 +170,7 @@
                             <p id="trapezoid-thickness-label">5" THICK</p>
                             <p id="trapezoid-back-width-label">10"</p>
                             <div class="trapezoid-dimensions-img">
-                                <img src="<?php echo base_url('assets/images/stepper/product-three-a/trapezoidal.png')?>">
+                                <img src="<?php echo base_url('assets/images/stepper/product-three-b/trapezoidal.png')?>">
                             </div>
                             <p id="trapezoid-height-label">15"</p>
                             <p id="trapezoid-width-label">25"</p>
@@ -228,7 +228,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageCoverReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageCoverReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -281,25 +281,25 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageFillReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageFillReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-4 fill-wrapper">
+                        <!-- <div class="col-md-4 fill-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyster-fiber.jpg')?>">
                             </div>
                             <br>
                             <label><input type="radio" name="fill_radio" checked value="1">Polyster Fiber</label>
-                        </div>
+                        </div> -->
                         <div class="col-md-4 fill-wrapper">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="fill_radio" value="2">Polyurethane Foam</label>
+                            <label><input type="radio" name="fill_radio" checked value="2">Polyurethane Foam</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>
@@ -331,7 +331,7 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageTieReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageTieReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
@@ -339,37 +339,37 @@
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties1" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-1.png')?>">
+                                <img class="ties1" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-1.png')?>">
                             </div>
                             <label><input type="radio" class="square-corner-radio" name="ties_radio" checked value="1">None</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-2.png')?>">
+                                <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-2.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="2">2 at back corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-3.png')?>">
+                                <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-3.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="3">2 ties at back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-4.png')?>">
+                                <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-4.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="4">4 ties at all corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-5.png')?>">
+                                <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-5.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="5">4 ties at front and back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-three-A/tie/square/tie-6.png')?>">
+                                <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-three-b/tie/square/tie-6.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="6">2 ties at sides</label>
                         </div>
@@ -396,13 +396,13 @@
                         <!-- <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p> -->
-                        <img id="imageConfirmReview" src="<?php echo base_url('assets/images/stepper/product-three-A/shapes/product-3-A.png')?>">
+                        <img id="imageConfirmReview" src="<?php echo base_url('assets/images/stepper/product-three-b/shapes/product-3-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-6 panel-customization confirm-wrapper">
-                        <p><span>PRODUCT</span><span id="productreview">Custom Chair Back Pads</span></p>
+                        <p><span>PRODUCT</span><span id="productreview">Custom Bench Back Pads</span></p>
                         <p><span>SHAPE</span><span id="shapereview">Square Corners</span></p>
                         <p><span>STYLE</span><span id="stylereview">Waterfall Edge</span></p>
                         <p><span>DIMENSIONS</span><span id="dimensionsreview">25W x 12L x 5T</span></p>
@@ -488,6 +488,6 @@
 <?php $this->view('Components/Modals/select-trimming.php') ?>
 
 <?php $this->view('Assets/include_script.php') ?>
-<script src="<?php echo base_url(); ?>assets/custom/js/productthreea.js"></script>
+<script src="<?php echo base_url(); ?>assets/custom/js/productthreeb.js"></script>
 
 <?php $this->view('Components/footer.php') ?>

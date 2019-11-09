@@ -299,7 +299,7 @@
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
-                            <label><input type="radio" name="fill_radio" value="2">Polyurethane Foam</label>
+                            <label><input type="radio" name="fill_radio" checked value="2">Polyurethane Foam</label>
                         </div>
                         <div class="col-md-4 fill-wrapper">
                             <div>

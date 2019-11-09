@@ -23,7 +23,7 @@ $(document).ready(function () {
 			'structure': { 'index': 1, 'imageName': 'product-2-A-waterfall', 'type': 'Waterfall Edge' },
 			'dimension': { 'thickness': 2, 'depth': 8, 'width': 8, 'diameter': 0, 'backwidth': 0, 'frontwidth': 0 },
 			'cover': { 'trimming': 'No', 'fabric': 'Test Name 1' },
-			'fill': { 'type': 'Polyster Fiber' },
+			'fill': { 'type': 'Polyurethane Foam' },
 			'ties': { 'type': 'None' }
 		}
 	}
