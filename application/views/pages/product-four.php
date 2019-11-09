@@ -277,21 +277,21 @@
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper polyster">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyster-fiber.jpg')?>">
                             </div>
                             <br>
                             <label><input type="radio" name="fill_radio" checked value="1">Polyster Fiber</label>
                         </div>
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper polyurethane">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/polyurethane-foam.jpg')?>">
                             </div>
                             <br>
                             <label><input type="radio" name="fill_radio" value="2">Polyurethane Foam</label>
                         </div>
-                        <div class="col-md-4 fill-wrapper">
+                        <div class="col-md-4 fill-wrapper reticulated">
                             <div>
                                 <img src="<?php echo base_url('assets/images/stepper/fill/reticulated-dry-fast-foam.jpg')?>">
                             </div>

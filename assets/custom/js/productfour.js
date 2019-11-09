@@ -347,7 +347,12 @@ var setStyleReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-four/shape-structure/' + imageName);
 			fetchedData['product-4'].structure.imageName = fetchedData['product-4'].shape.imageName + '-waterfall';
 			fetchedData['product-4'].structure.index = 1;
-			fetchedData['product-4'].structure.type = 'Waterfall Edge';
+            fetchedData['product-4'].structure.type = 'Waterfall Edge';
+            
+            $('.polyster').show();
+            $('.polyster > label > input:radio').prop('checked', true);
+            fetchedData['product-4'].fill.type = 'Polyster Fiber';
+
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 		case 2:
@@ -361,7 +366,12 @@ var setStyleReviewImage = (c) => {
 			$('#imageConfirmReview').attr("src", WEB_URL + '/assets/images/stepper/product-four/shape-structure/' + imageName);
 			fetchedData['product-4'].structure.imageName = fetchedData['product-4'].shape.imageName + '-boxed';
 			fetchedData['product-4'].structure.index = 2;
-			fetchedData['product-4'].structure.type = 'Boxed Edge';
+            fetchedData['product-4'].structure.type = 'Boxed Edge';
+            
+            $('.polyster').hide();
+            $('.polyurethane > label > input:radio').prop('checked', true);
+            fetchedData['product-4'].fill.type = 'Polyurethane Foam';
+
 			localStorage.setItem('productDetail', JSON.stringify(fetchedData));
 			break;
 	}
