@@ -443,19 +443,19 @@ function openTrimmingDetailsModal(i) {
 }
 
 function setValueToWidthInDimension() {
-	for (var i = 8; i <= 50; i += 0.5) {
+	for (var i = 8; i <= 40; i += 1) {
 		$('#width').append(`<option>${i} WIDTH</option>`);
 	}
 }
 
 function setValueTobackInDimension() {
-	for (var i = 8; i <= 50; i += 0.5) {
+	for (var i = 8; i <= 32; i += 1) {
 		$('#back').append(`<option>${i} BACK</option>`);
 	}
 }
 
 function setValueToseatInDimension() {
-	for (var i = 8; i <= 50; i += 0.5) {
+	for (var i = 10; i <= 50; i += 1) {
 		$('#seat').append(`<option>${i} SEAT</option>`);
 	}
 }

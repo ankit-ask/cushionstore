@@ -4,7 +4,7 @@
 
     <div class="product-section-header">
         <div class="col-lg-6 product-name">
-            <p>CUSTOM CHAIR CUSHION</p>
+            <p>CUSTOM OTTOMAN CUSHION</p>
         </div>
         <div class="col-lg-2 product-price">
             <p>$123.45</p>
@@ -54,39 +54,39 @@
                         <p class="panel-details-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-four/shapes/product-4-A.png')?>">
+                        <img id="imageShapeReview" src="<?php echo base_url('assets/images/stepper/product-eight/shapes/product-8-A.png')?>">
                         <button class="btn product-preview-btn">
                             PRODUCT PREVIEW
                         </button>
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/modern-clean.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/modern-clean.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" checked value="1">Modern Clean</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/modern-tufted.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/modern-tufted.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="2">Modern Tufted</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/modern-sectioned.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/modern-sectioned.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="3">Modern Sectioned</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/traditional-clean.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/traditional-clean.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="4">Traditional Clean</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/traditional-tufted.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/traditional-tufted.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="5">Traditional Tufted</label>
                         </div>
                         <div class="col-md-4 shape-radio-wrapper">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/traditional-sectioned.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/traditional-sectioned.png')?>">
                             <br>
                             <label><input type="radio" name="shape_radio" value="6">Traditional Sectioned</label>
                         </div>
@@ -119,12 +119,12 @@
                     </div>
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-6 style-radio-wrapper waterfall">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/structure/waterfall-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/structure/waterfall-edge.png')?>">
                             <br>
                             <label><input type="radio" class="waterfall-radio" name="style_radio" checked value="1">Waterfall Edge</label>
                         </div>
                         <div class="col-md-6 style-radio-wrapper boxed">
-                            <img src="<?php echo base_url('assets/images/stepper/product-four/structure/boxed-edge.png')?>">
+                            <img src="<?php echo base_url('assets/images/stepper/product-eight/structure/boxed-edge.png')?>">
                             <br>
                             <label><input type="radio" class="boxed-radio" name="style_radio" value="2">Boxed Edge</label>
                         </div>
@@ -161,7 +161,7 @@
                             <p id="thickness-label">2" THICK</p>
                             <p id="back-label">8"</p>
                             <div class="trapezoid-dimensions-img">
-                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-four/traditional-sectioned.png')?>">
+                                <img id="imageShowingDimension" src="<?php echo base_url('assets/images/stepper/product-eight/traditional-sectioned.png')?>">
                             </div>
                             <p id="seat-label">8"</p>
                             <p id="width-label">8"</p>
@@ -228,24 +228,24 @@
                             <div class="col-md-6 fabric-sample-img">
                                 <img src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>"> 
                             </div>
-                            <div class="col-md-6 fabric-sample-img">
+                            <!-- <div class="col-md-6 fabric-sample-img">
                                 <img id="trimming-fabric-img" src="<?php echo base_url('assets/images/fabric-sample-1.jpg')?>">    
                                 <p id="trimming-fabric-alt">No Trimming</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-md-12 dimension-select-wrapper">
-                            <select class="form-control" id="trimmingoption">
+                            <!-- <select class="form-control" id="trimmingoption">
                                 <option>NO TRIMMING</option>
                                 <option>WITH TRIMMING</option>
-                            </select>
+                            </select> -->
 
                             <button class="btn btn-success fabric-select-btn" onClick='openModal()'>
                                 <i class="fas fa-angle-right"></i> SELECT CUSHION FABRIC
                             </button>
 
-                            <button class="btn btn-default fabric-select-btn trimming-select-button" onClick='openTrimmingModal()'>
+                            <!-- <button class="btn btn-default fabric-select-btn trimming-select-button" onClick='openTrimmingModal()'>
                                 <i class="fas fa-angle-right"></i> SELECT TRIMMING
-                            </button>
+                            </button> -->
 
                         </div>
                     </div>   
@@ -329,37 +329,37 @@
                     <div class="col-lg-8 panel-customization">
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties1" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-1.png')?>">
+                                <img class="ties1" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-1.png')?>">
                             </div>
                             <label><input type="radio" class="square-corner-radio" name="ties_radio" checked value="1">None</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-2.png')?>">
+                                <img class="ties2" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-2.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="2">4 ties at hinge and sides of back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-3.png')?>">
+                                <img class="ties3" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-3.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="3">6 ties at hinge and sides of seat and back</label>
                         </div>
                         <div class="col-md-4 ties-wrapper">
                             <div>
-                                <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-4.png')?>">
+                                <img class="ties4" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-4.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="4">2 ties at hinge</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-5.png')?>">
+                                <img class="ties5" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-5.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="5">4 ties at hinge and back corners</label>
                         </div>
                         <div class="col-md-4 ties-wrapper remove">
                             <div>
-                                <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-four/tie/modern-clean/tie-6.png')?>">
+                                <img class="ties6" src="<?php echo base_url('assets/images/stepper/product-eight/tie/modern-clean/tie-6.png')?>">
                             </div>
                             <label><input type="radio" name="ties_radio" value="6">6  ties at hinge, seat corners and back corners</label>
                         </div>
@@ -391,7 +391,7 @@
                         </button>
                     </div>
                     <div class="col-lg-6 panel-customization confirm-wrapper">
-                        <p><span>PRODUCT</span><span id="productreview">Custom Chair Cushion</span></p>
+                        <p><span>PRODUCT</span><span id="productreview">Custom Ottoman Cushion</span></p>
                         <p><span>SHAPE</span><span id="shapereview">Square Corners</span></p>
                         <p><span>STYLE</span><span id="stylereview">Waterfall Edge</span></p>
                         <p><span>DIMENSIONS</span><span id="dimensionsreview">25W x 12L x 5T</span></p>
@@ -477,6 +477,6 @@
 <?php $this->view('Components/Modals/select-trimming.php') ?>
 
 <?php $this->view('Assets/include_script.php') ?>
-<script src="<?php echo base_url(); ?>assets/custom/js/productfour.js"></script>
+<script src="<?php echo base_url(); ?>assets/custom/js/producteight.js"></script>
 
 <?php $this->view('Components/footer.php') ?>

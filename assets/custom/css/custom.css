@@ -736,10 +736,10 @@ input[type="radio"]{
 .ties-wrapper div{
     /* background: #707070; */
     color: #ffffff;
-    height: 100px;
-    width: 100px;
+    /* height: 100px; */
+    /* width: 100px; */
     border-radius: 100px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .ties-wrapper p{
@@ -1154,4 +1154,11 @@ footer .brand-tab span i{
 .fabric-details-inner img{
     width: 100%;
     border-radius: 10px;
+}
+
+.five-pills li{
+    width: calc(100%/5);
+}
+.six-pills li{
+    width: calc(100%/6);
 }
